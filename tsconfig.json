@@ -18,6 +18,12 @@
       }
     ],
     "paths": {
+      "@/components": ["./app/_components/index.ts"],
+      "@/data": ["./app/_data/index.ts"],
+      "@/hooks": ["./app/_hooks/index.ts"],
+      "@/layouts": ["./app/_layouts/index.ts"],
+      "@/providers": ["./app/_providers/index.tsx"],
+      "@/utils": ["./app/_utils/index.ts"],
       "@/*": ["./*"]
     }
   },
