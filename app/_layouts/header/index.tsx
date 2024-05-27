@@ -1,9 +1,10 @@
 "use client";
 
+import Image from 'next/image';
+
 import { motion } from 'framer-motion';
 
-import { Slider } from '@/components';
-import Image from 'next/image';
+import { Parallax, Slider } from '@/components';
 
 export const slideUp = {
   initial: {
@@ -20,7 +21,7 @@ export const slideUp = {
 export function Header() {
   return (
     <motion.header
-      className='relative h-screen overflow-hidden bg-black text-white'
+      className='relative h-[110vh] overflow-hidden bg-black text-white'
       variants={slideUp}
       initial='initial'
       animate='enter'
@@ -32,23 +33,27 @@ export function Header() {
         className='object-cover md:scale-125 md:object-contain'
       />
 
-      <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
+      <div className='relative flex h-full pb-[7vh] flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
         <div className='select-none'>
-          <h1 className='text-[max(9em,15vw)]'>
-            <Slider repeat={4} baseVelocity={2}>
-              <span className='pe-12'>
-                Dong Hyeon Seo
-                <span className='spacer'>—</span>
-              </span>
-            </Slider>
+          <h1 className='text-[max(9em,12vw)]'>
+            <Parallax speed={-1}>
+              <Slider repeat={4} baseVelocity={2}>
+                <span className='pe-12'>
+                  <span>Dong Hyeon Seo</span>
+                  <span className='spacer'>—</span>
+                </span>
+              </Slider>
+            </Parallax>
           </h1>
         </div>
 
         <div className='md:ml-auto'>
-          <div className='mx-10 max-md:my-12 md:mx-36'>
-            <h4 className='text-[clamp(1.55em,2.5vw,2.75em)]'>
-              <span className='block'>Front Developer</span>
-              <span className='block'>Web Developer</span>
+          <div className='mx-20 max-md:my-4 md:mx-36'>
+            <h4 className='text-[clamp(1.55em,2vw,2.75em)]'>
+              <Parallax speed={-1}>
+                <span className='block'>Front Developer</span>
+                <span className='block'>Web Developer</span>
+              </Parallax>
             </h4>
           </div>
         </div>
