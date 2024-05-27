@@ -1,13 +1,11 @@
 "use client";
 
-import { useLenis } from "@/hooks";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 export function Transition({ children }: { children: React.ReactNode }) {
-  useLenis();
-
   return (
-    <div>
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
       {children}
-    </div>
+    </ReactLenis>
   );
 }

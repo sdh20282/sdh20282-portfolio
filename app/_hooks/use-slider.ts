@@ -12,7 +12,7 @@ import {
   wrap,
 } from 'framer-motion';
 
-export function useParallaxSlider(baseVelocity: number = 100) {
+export function useSlider(baseVelocity: number = 100) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -20,7 +20,7 @@ export function useParallaxSlider(baseVelocity: number = 100) {
     damping: 50,
     stiffness: 400,
   });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 2000], [0, 5], {
     clamp: false,
   });
 

@@ -1,2 +1,1 @@
-export * from './use-lenis';
-export * from './use-parallax-slider';
+export * from './use-slider';

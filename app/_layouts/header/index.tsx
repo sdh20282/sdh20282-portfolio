@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-import { ParallaxSlider } from '@/components';
+import { Slider } from '@/components';
 import Image from 'next/image';
 
 export const slideUp = {
@@ -35,12 +35,12 @@ export function Header() {
       <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
         <div className='select-none'>
           <h1 className='text-[max(9em,15vw)]'>
-            <ParallaxSlider repeat={4} baseVelocity={2}>
+            <Slider repeat={4} baseVelocity={2}>
               <span className='pe-12'>
                 Dong Hyeon Seo
                 <span className='spacer'>—</span>
               </span>
-            </ParallaxSlider>
+            </Slider>
           </h1>
         </div>
 
