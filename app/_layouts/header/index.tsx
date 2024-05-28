@@ -35,12 +35,12 @@ export function Header() {
 
       <div className='relative flex h-full pb-[7vh] flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
         <div className='select-none'>
-          <h1 className='text-[max(9em,12vw)]'>
+          <h1 className='text-[max(9em,12vw)] font-montserrat font-normal'>
             <Parallax speed={-1}>
               <Slider repeat={4} baseVelocity={2}>
                 <span className='pe-12'>
                   <span>Dong Hyeon Seo</span>
-                  <span className='spacer'>—</span>
+                  <span className='ml-12'>-</span>
                 </span>
               </Slider>
             </Parallax>

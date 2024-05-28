@@ -7,6 +7,15 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        montserrat: "var(--montserrat-text)",
+        rubik: "var(--rubik-text)",
+        ibmkr: "var(--ibm-kr-text)",
+      }
+    },
+  },
   plugins: [
     animatePlugin
   ],
