@@ -2,6 +2,8 @@ import {
   Transition,
   Navbar,
   Header,
+  Introduce,
+  TeamProjects
 } from "@/layouts";
 
 export default function Page() {
@@ -9,7 +11,10 @@ export default function Page() {
     <Transition>
       <Navbar />
       <Header />
-      <div className="h-screen"></div>
+      <main>
+        {/* <Introduce /> */}
+        <TeamProjects />
+      </main>
     </Transition>
   );
 }

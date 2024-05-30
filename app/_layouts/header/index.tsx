@@ -33,9 +33,9 @@ export function Header() {
         className='object-cover md:scale-125 md:object-contain'
       />
 
-      <div className='relative flex h-full pb-[7vh] flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
+      <div className='relative flex h-full pb-[7.5vh] flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
         <div className='select-none'>
-          <h1 className='text-[max(9em,12vw)] font-montserrat font-normal'>
+          <h1 className='text-[max(9em,11vw)] font-rubik font-normal'>
             <Parallax speed={-1}>
               <Slider repeat={4} baseVelocity={2}>
                 <span className='pe-12'>
@@ -49,12 +49,12 @@ export function Header() {
 
         <div className='md:ml-auto'>
           <div className='mx-20 max-md:my-4 md:mx-36'>
-            <h4 className='text-[clamp(1.55em,2vw,2.75em)]'>
+            <div className='text-[clamp(1.55em,2vw,2.75em)]'>
               <Parallax speed={-1}>
                 <span className='block'>Front Developer</span>
                 <span className='block'>Web Developer</span>
               </Parallax>
-            </h4>
+            </div>
           </div>
         </div>
       </div>
