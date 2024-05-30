@@ -46,7 +46,7 @@ export function TeamProjects() {
 
   return (
       <section
-        className='relative w-full py-[20vh] px-[10%] text-white flex flex-col gap-[5vw] bg-black'
+        className='relative w-full min-h-screen py-[20vh] px-[10%] text-white flex flex-col gap-[5vw] bg-black'
         onPointerMove={({ clientX, clientY }) => moveItems(clientX, clientY)}
       >
         <header className='w-[50%] flex flex-col justify-center gap-[10px]'>
@@ -57,7 +57,6 @@ export function TeamProjects() {
             handlePointerEnter={handlePointerEnter}
             handlePointerLeave={handlePointerLeave}
             moveItems={moveItems}
-            item={{ active, index }}
           />
           <ThumbnailModal
             ref={modal}
