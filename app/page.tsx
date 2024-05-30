@@ -4,7 +4,8 @@ import {
   Header,
   Introduce,
   PersonalProjects,
-  TeamProjects
+  TeamProjects,
+  Contact,
 } from "@/layouts";
 
 export default function Page() {
@@ -13,10 +14,10 @@ export default function Page() {
       <Navbar />
       <Header />
       <main>
-        {/* <Introduce /> */}
-        <PersonalProjects />
         <TeamProjects />
+        <PersonalProjects />
       </main>
+      <Contact />
     </Transition>
   );
 }

@@ -29,9 +29,9 @@ export function PersonalProjects() {
   });
 
   return (
-    <section ref={containerRef} className='relative z-10 mt-14 min-h-screen'>
+    <section ref={containerRef} className='relative z-10 bg-white'>
       <div className='grid items-center'>
-        <div className='bg-background'>
+        <div className='bg-[#1c1c1c] pt-14'>
           <motion.div
             className='mb-10 flex gap-10'
             style={{
@@ -53,13 +53,16 @@ export function PersonalProjects() {
           </motion.div>
         </div>
 
-        <motion.div
-          className='w-screen bg-background'
-          style={{
-            height: transformY,
-            borderRadius: '0 0 50% 50%',
-          }}
-        />
+        <div className='relative'>
+          <motion.div
+            className='absolute w-[100vw] bg-[#1c1c1c] shadow-xl'
+            style={{
+              top: 0,
+              height: transformY,
+              borderRadius: '0 0 50% 50% / 0 0 20% 20%',
+            }}
+          />
+        </div>
       </div>
     </section>
   );

@@ -37,7 +37,7 @@ const List = ({ props: {
         moveItems(clientX, clientY);
       }}
     >
-      <Link href="/" className='flex justify-between items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[8vh] group-hover:px-[5vw] group-hover:text-[#777]'>
+      <Link href="/" className='flex justify-between items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[6vw] group-hover:px-[5vw] group-hover:text-[#777]'>
         <p
           style={{
             fontSize: 'calc(clamp(3.25em, 4vw, 8em) * 0.75)',

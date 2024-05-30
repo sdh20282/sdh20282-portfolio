@@ -21,7 +21,7 @@ export const slideUp = {
 export function Header() {
   return (
     <motion.header
-      className='relative h-[110vh] overflow-hidden bg-black text-white'
+      className='relative h-[110vh] overflow-hidden text-white'
       variants={slideUp}
       initial='initial'
       animate='enter'
@@ -30,7 +30,7 @@ export function Header() {
         src={"https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
         alt='profile image'
         fill={true}
-        className='object-cover md:scale-125 md:object-contain'
+        className='object-cover'
       />
 
       <div className='relative flex h-full pb-[7.5vh] flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
