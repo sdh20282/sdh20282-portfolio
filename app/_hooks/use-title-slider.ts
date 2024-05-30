@@ -12,7 +12,7 @@ import {
   wrap,
 } from 'framer-motion';
 
-export function useSlider(baseVelocity: number = 100) {
+export function useTitleSlider(baseVelocity: number = 100) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);

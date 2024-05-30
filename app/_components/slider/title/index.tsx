@@ -3,11 +3,11 @@
 import { Fragment } from "react";
 import { motion } from "framer-motion";
 
-import { useSlider } from "@/hooks";
+import { useTitleSlider } from "@/hooks";
 import { randomId } from "@/utils";
 
-export function Slider({ children, repeat = 2, baseVelocity }: { children: React.ReactNode, repeat: number, baseVelocity: number }) {
-  const x = useSlider(baseVelocity);
+export function TitleSlider({ children, repeat = 2, baseVelocity }: { children: React.ReactNode, repeat: number, baseVelocity: number }) {
+  const x = useTitleSlider(baseVelocity);
 
   return (
     <div className='flex flex-nowrap overflow-hidden whitespace-nowrap'>

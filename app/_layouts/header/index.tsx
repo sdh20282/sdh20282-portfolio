@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 
-import { Parallax, Slider } from '@/components';
+import { Parallax, TitleSlider } from '@/components';
 
 export const slideUp = {
   initial: {
@@ -37,12 +37,12 @@ export function Header() {
         <div className='select-none'>
           <h1 className='text-[max(9em,11vw)] font-rubik font-normal'>
             <Parallax speed={-1}>
-              <Slider repeat={4} baseVelocity={2}>
+              <TitleSlider repeat={4} baseVelocity={2}>
                 <span className='pe-12'>
                   <span>Dong Hyeon Seo</span>
                   <span className='ml-12'>-</span>
                 </span>
-              </Slider>
+              </TitleSlider>
             </Parallax>
           </h1>
         </div>
