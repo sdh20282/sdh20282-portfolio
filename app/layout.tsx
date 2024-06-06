@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${rubik.variable} ${ibmKR.variable} font-rubik`}>
+      <body className={`${montserrat.variable} ${rubik.variable} ${ibmKR.variable} font-rubik overflow-x-hidden`}>
         <Providers>
           {children}
         </Providers>

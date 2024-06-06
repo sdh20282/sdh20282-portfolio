@@ -46,11 +46,12 @@ export function TeamProjects() {
 
   return (
       <section
-        className='relative w-full py-[10vh] px-[10vw] text-white flex flex-col gap-[5vw] bg-[#1C1C1C]'
+        id='projects'
+        className='relative w-full pt-[10vh] pb-[20vh] px-[10vw] text-white flex flex-col gap-[5vw] bg-[#1C1C1C] z-30'
         onPointerMove={({ clientX, clientY }) => moveItems(clientX, clientY)}
       >
-        <header className='w-[50%] flex flex-col justify-center gap-[10px]'>
-          <h2>Team Projects</h2>
+        <header className='w-[50%] flex flex-col justify-center gap-[10px] uppercase text-[#999]'>
+          <h2>Recent Projects</h2>
         </header>
         <div className='flex flex-col w-full'>
           <ThumbnailList

@@ -4,14 +4,16 @@ import { RefObject } from 'react';
 
 import { useScroll, useTransform } from 'framer-motion';
 
-export function useContactSlider(element: RefObject<HTMLElement>) {
+import { useWindowSize } from '@uidotdev/usehooks';
+
+export function useContactSlider(element: RefObject<HTMLElement>, windowHeight: number) {
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ['start end', 'end start'],
+    offset: ['start end', 'end end'],
   });
+  
+  const blockHeight = useTransform(scrollYProgress, [0, 1], [windowHeight, 20]);
+  const footerHeight = useTransform(scrollYProgress, [0, 1], [-windowHeight, 0]);
 
-  const transformX = useTransform(scrollYProgress, [0, 1], [-50, 50]);
-  const transformY = useTransform(scrollYProgress, [0, 1], [-50, 50]);
-
-  return { transformX, transformY };
+  return { blockHeight, footerHeight };
 }

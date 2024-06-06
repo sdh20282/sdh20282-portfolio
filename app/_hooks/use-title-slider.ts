@@ -28,7 +28,7 @@ export function useTitleSlider(baseVelocity: number = 100) {
 
   const directionFactor = useRef(1);
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 750);
 
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;

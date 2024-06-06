@@ -53,16 +53,6 @@ export function PersonalProjects() {
           </motion.div>
         </div>
 
-        <div className='relative'>
-          <motion.div
-            className='absolute w-[100vw] bg-[#1c1c1c] shadow-xl'
-            style={{
-              top: 0,
-              height: transformY,
-              borderRadius: '0 0 50% 50% / 0 0 20% 20%',
-            }}
-          />
-        </div>
       </div>
     </section>
   );

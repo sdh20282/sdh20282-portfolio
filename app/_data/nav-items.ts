@@ -1,6 +1,6 @@
 export const navItems = [
   {
-    href: '#home',
+    href: '#',
     title: 'home',
   },
   {
@@ -8,11 +8,11 @@ export const navItems = [
     title: 'introduce',
   },
   {
-    href: '#skills',
-    title: 'skills',
-  },
-  {
     href: '#projects',
     title: 'projects',
   },
+  {
+    href: '#contact',
+    title: 'contact',
+  }
 ];

@@ -23,6 +23,14 @@ const config: Config = {
         rubik: "var(--rubik-text)",
         ibmkr: "var(--ibm-kr-text)",
       },
+      gridTemplateColumns: {
+        'auto-fit-100': 'repeat(auto-fit, minmax(100px, 1fr))',
+        'auto-fit-200': 'repeat(auto-fit, minmax(200px, 1fr))',
+        'auto-fit-250': 'repeat(auto-fit, minmax(250px, 1fr))',
+        'auto-fit-300': 'repeat(auto-fit, minmax(300px, 1fr))',
+        'auto-fit-330': 'repeat(auto-fit, minmax(330px, 1fr))',
+        'auto-fit-400': 'repeat(auto-fit, minmax(400px, 1fr))',
+      },
     },
   },
   plugins: [

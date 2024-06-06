@@ -16,7 +16,7 @@ export function Parallax({ children, speed = 1, id = "parallax", ...props }: { c
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     
-    const y = windowWidth! * speed * 0.1;
+    const y = windowWidth! * speed * 0.15;
     const setY = gsap.quickSetter(target.current, "y", "px");
 
     timeline.current = gsap.timeline({

@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Transition,
   Navbar,
@@ -5,6 +7,7 @@ import {
   Introduce,
   PersonalProjects,
   TeamProjects,
+  Education,
   Contact,
 } from "@/layouts";
 
@@ -13,9 +16,11 @@ export default function Page() {
     <Transition>
       <Navbar />
       <Header />
-      <main>
+      <main className="bg-[#1c1c1c]">
+        <Introduce />
         <TeamProjects />
         <PersonalProjects />
+        {/* <Education /> */}
       </main>
       <Contact />
     </Transition>

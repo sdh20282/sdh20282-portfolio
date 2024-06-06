@@ -1,12 +1,14 @@
 'use client';
 
+import Link from 'next/link';
+
 import { Code } from 'lucide-react';
 
 import { MagneticButton } from '@/components';
 
 export function NavbarTitle() {
   return (
-    <div className='group cursor-pointer'>
+    <Link href="/" className='group cursor-pointer'>
       <MagneticButton className='p-5 flex'>
         <div className='transition-transform duration-500 ease-in-out group-hover:animate-pulse'>
           <Code />
@@ -23,6 +25,6 @@ export function NavbarTitle() {
           </p>
         </div>
       </MagneticButton>
-    </div>
+    </Link>
   );
 }

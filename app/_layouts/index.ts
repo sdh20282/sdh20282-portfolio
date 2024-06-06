@@ -1,4 +1,5 @@
 export * from './contact';
+export * from './education';
 export * from './header';
 export * from './introduce';
 export * from './navbar';
