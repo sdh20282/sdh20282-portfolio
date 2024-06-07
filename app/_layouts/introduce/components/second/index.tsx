@@ -158,9 +158,6 @@ export function Second({
                     <div className="inline-flex overflow-hidden gap-[10px]">
                       {
                         extra?.list.map((skill, skillIndex) => {
-                          // console.log(extraIndex, extraSkillTransformInfo[extraIndex]);
-                          
-
                           return (
                             <motion.span key={skillIndex} style={{
                               // @ts-ignore

@@ -8,6 +8,7 @@ import { useWindowSize } from "@/hooks";
 
 import { First } from "./components/first";
 import { Second } from "./components/second";
+import { Progress } from "./components/progress";
 
 export function Introduce() {  
   const target = useRef(null);
@@ -33,6 +34,9 @@ export function Introduce() {
       }
       {
         height && <First windowHeight={height!} sectionHeight={sectionHeight} scrollYProgress={scrollYProgress} />
+      }
+      {
+        height && <Progress windowHeight={height!} sectionHeight={sectionHeight} scrollYProgress={scrollYProgress} />
       }
     </motion.section>
   )
