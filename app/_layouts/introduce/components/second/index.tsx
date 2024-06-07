@@ -126,7 +126,7 @@ export function Second({
           {
             skillDesc.split(`\n`).map((line, lineIndex) => {
               return (
-                <div key={"line-" + lineIndex}>
+                <div key={"line-" + lineIndex} className="font-gothica1">
                   {
                     line.split(' ').map((word, wordIndex) => {
                       return (
@@ -144,7 +144,7 @@ export function Second({
               )
             })
           }
-          <div className="grid grid-cols-2 gap-y-8">
+          <div className="grid grid-cols-2 gap-y-8 font-rubik">
             {
               extraSummary.map((extra, extraIndex) => {
                 return (

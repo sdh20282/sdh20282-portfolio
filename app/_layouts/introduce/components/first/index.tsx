@@ -83,7 +83,7 @@ export function First({
       </motion.div>
       <div className="
         absolute flex flex-col gap-4 my-2 pl-[2vw] py-2
-        text-white text-sm xl:text-base text-center lg:text-start
+        text-white font-gothica1 text-sm xl:text-base text-center lg:text-start
         w-[85vw] lg:w-[40vw] 
         top-[50vh] lg:top-[30vh] xl:top-[25vh]
         left-[50vw] lg:left-[55vw]

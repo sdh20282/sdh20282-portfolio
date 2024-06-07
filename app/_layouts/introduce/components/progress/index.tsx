@@ -12,7 +12,7 @@ export function Progress({
   const wrapperTransformY = useTransform(scrollYProgress, [0, 1], [-windowHeight, sectionHeight - windowHeight]);
 
   const progressWidth = useTransform(scrollYProgress, [0, 0.1, 0.75, 1], ["0%", "0%", "100%", "100%"]);
-  const progressOpacity = useTransform(scrollYProgress, [0, 0.1, 0.15, 0.75, 0.8, 1], [0, 0, 1, 1, 0, 0]);
+  const progressOpacity = useTransform(scrollYProgress, [0, 0.1, 0.15, 0.75, 0.8, 1], [0, 0, 0.8, 0.8, 0, 0]);
 
   return (
     <motion.div

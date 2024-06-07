@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Rubik, IBM_Plex_Sans_KR } from "next/font/google";
+import { Montserrat, Rubik, IBM_Plex_Sans_KR, Gothic_A1, Do_Hyeon } from "next/font/google";
 
 import { Providers } from "@/providers";
 
@@ -26,6 +26,13 @@ const ibmKR = IBM_Plex_Sans_KR({
   variable: "--ibm-kr-text"
 });
 
+const gothicA1 = Gothic_A1({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  style: ["normal"],
+  variable: "--gothic-ai-text"
+});
+
 export const metadata: Metadata = {
   title: {
     template: "%s | sdh20282's Portfolio",
@@ -41,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${rubik.variable} ${ibmKR.variable} font-rubik overflow-x-hidden`}>
+      <body className={`${montserrat.variable} ${rubik.variable} ${ibmKR.variable} ${gothicA1.variable} font-rubik overflow-x-hidden`}>
         <Providers>
           {children}
         </Providers>

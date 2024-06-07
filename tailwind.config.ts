@@ -22,6 +22,7 @@ const config: Config = {
         montserrat: "var(--montserrat-text)",
         rubik: "var(--rubik-text)",
         ibmkr: "var(--ibm-kr-text)",
+        gothica1: "var(--gothic-ai-text)",
       },
       gridTemplateColumns: {
         'auto-fit-100': 'repeat(auto-fit, minmax(100px, 1fr))',
