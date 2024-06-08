@@ -20,7 +20,7 @@ export default function Page() {
         <Introduce />
         <TeamProjects />
         <PersonalProjects />
-        {/* <Education /> */}
+        <Education />
       </main>
       <Contact />
     </Transition>
