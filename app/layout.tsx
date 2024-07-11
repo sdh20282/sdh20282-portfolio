@@ -1,23 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat, Rubik, IBM_Plex_Sans_KR, Gothic_A1, Do_Hyeon } from "next/font/google";
+import { IBM_Plex_Sans_KR, Gothic_A1 } from "next/font/google";
 
 import { Providers } from "@/providers";
+import { montserrat, rubik, nanumSquare, alliance } from "@/utils";
+import { Contact } from "@/layouts";
 
 import "./globals.css";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  style: ["normal"],
-  variable: "--montserrat-text"
-})
-
-const rubik = Rubik({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  style: ["normal"],
-  variable: "--rubik-text"
-});
 
 const ibmKR = IBM_Plex_Sans_KR({
   subsets: ["latin", "latin-ext"],
@@ -48,9 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${rubik.variable} ${ibmKR.variable} ${gothicA1.variable} font-rubik overflow-x-hidden`}>
+      <body className={`${montserrat.variable} ${rubik.variable} ${ibmKR.variable} ${gothicA1.variable} ${nanumSquare.variable} ${alliance.variable} relative font-rubik overflow-x-hidden bg-[#232727]`}>
         <Providers>
           {children}
+          <Contact key='footer' />
         </Providers>
       </body>
     </html>

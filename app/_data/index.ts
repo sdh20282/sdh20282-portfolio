@@ -1,3 +1,4 @@
+export * from './experience';
 export * from './introduce-myself';
 export * from './nav-items';
 export * from './projects';

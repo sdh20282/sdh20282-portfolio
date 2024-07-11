@@ -1,7 +1,20 @@
-import { WrapBalancerProvider } from "./wrap-balancer"
+"use client";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+import {
+  WrapBalancerProvider,
+  LenisProvider
+ } from "./components"
+
+export function Providers({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <WrapBalancerProvider>{children}</WrapBalancerProvider>
+    <WrapBalancerProvider>
+      <LenisProvider>
+          {children}
+      </LenisProvider>
+    </WrapBalancerProvider>
   );
 }

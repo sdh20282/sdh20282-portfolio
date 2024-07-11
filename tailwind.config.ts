@@ -13,19 +13,24 @@ const config: Config = {
         thumbnailAppear: {
           '0%': { transform: `translate(0, 300px)` },
           '100%': { transform: `translate(0, 0)` }
-        }
+        },
       },
       animation: {
-        thumbnailAppear: `thumbnailAppear 0.8s cubic-bezier(0.455, 0.030, 0.155, 1.000) forwards`
+        thumbnailAppear: `thumbnailAppear 0.8s cubic-bezier(0.455, 0.030, 0.155, 1.000) forwards`,
       },
       fontFamily: {
-        montserrat: "var(--montserrat-text)",
-        rubik: "var(--rubik-text)",
+        montserrat: "var(--font-montserrat)",
+        rubik: "var(--font-rubik)",
+        nanumsquare: "var(--font-nanumsquare)",
+        alliance: "var(--font-alliance)",
+
+
         ibmkr: "var(--ibm-kr-text)",
         gothica1: "var(--gothic-ai-text)",
       },
       gridTemplateColumns: {
         'auto-fit-100': 'repeat(auto-fit, minmax(100px, 1fr))',
+        'auto-fit-150': 'repeat(auto-fit, minmax(150px, 1fr))',
         'auto-fit-200': 'repeat(auto-fit, minmax(200px, 1fr))',
         'auto-fit-250': 'repeat(auto-fit, minmax(250px, 1fr))',
         'auto-fit-300': 'repeat(auto-fit, minmax(300px, 1fr))',
