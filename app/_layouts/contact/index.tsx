@@ -35,7 +35,7 @@ export function Contact() {
       }}
     >
       <motion.div
-        className='absolute w-[120vw] top-[-1px] -left-[10vw] bg-[#232727] shadow-2xl z-10'
+        className='absolute w-[150vw] -top-[1px] -left-[25vw] bg-[#232727] shadow-2xl z-10'
         style={{
           borderRadius: '50% / 0 0 100% 100%',
           height: shapeHeight,
