@@ -1,6 +1,4 @@
-import { Curve } from "@/components";
 import { 
-  PageTransition,
   Navbar,
   AboutHeader,
   AboutTransitionContainer,
@@ -13,13 +11,13 @@ export const metadata = {
 
 export default function About() {
   return (
-    <PageTransition>
+    <>
       <Navbar />
       <AboutHeader />
       <main className="">
         <AboutTransitionContainer />
         <AboutExperience />
       </main>
-    </PageTransition>
+    </>
   )
 }

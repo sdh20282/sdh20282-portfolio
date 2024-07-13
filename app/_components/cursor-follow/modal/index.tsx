@@ -5,10 +5,9 @@ import Image, { StaticImageData } from 'next/image';
 
 import { Variants, motion } from 'framer-motion';
 
-import { thumbnailOptions } from '@/data';
 import { randomId } from '@/utils';
 
-const _ThumbnailModal = ({ 
+function _CursorFollowModal({ 
   variants,
   active,
   index,
@@ -19,7 +18,7 @@ const _ThumbnailModal = ({
   active: boolean,
   index: number,
   options: { title: string, image: StaticImageData }[]
-}, ref: LegacyRef<HTMLDivElement>) => {
+}, ref: LegacyRef<HTMLDivElement>) {
   return (
     <motion.div
       ref={ref}
@@ -56,4 +55,4 @@ const _ThumbnailModal = ({
   );
 }
 
-export const ThumbnailModal = forwardRef(_ThumbnailModal);
+export const CursorFollowModal = forwardRef(_CursorFollowModal);

@@ -2,7 +2,8 @@
 
 import {
   WrapBalancerProvider,
-  LenisProvider
+  LenisProvider,
+  PageTransition,
  } from "./components"
 
 export function Providers({
@@ -13,7 +14,9 @@ export function Providers({
   return (
     <WrapBalancerProvider>
       <LenisProvider>
+        <PageTransition>
           {children}
+        </PageTransition>
       </LenisProvider>
     </WrapBalancerProvider>
   );

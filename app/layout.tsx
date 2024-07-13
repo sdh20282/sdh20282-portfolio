@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${rubik.variable} ${ibmKR.variable} ${gothicA1.variable} ${nanumSquare.variable} ${alliance.variable} relative font-rubik overflow-x-hidden bg-[#232727]`}>
         <Providers>
           {children}
-          <Contact key='footer' />
+          {/* <Contact /> */}
         </Providers>
       </body>
     </html>

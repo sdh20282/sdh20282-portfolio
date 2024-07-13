@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { Dot } from 'lucide-react';
 
-import { MagneticButton } from '@/components';
+import { Magnetic } from '@/components';
 import { navItems } from '@/data';
 import { randomId } from '@/utils';
 
@@ -19,12 +19,12 @@ export function NavbarList() {
           return (
             <li key={randomId()} className='group'>
               <Link href={href}>
-                <MagneticButton className='p-5'>
+                <Magnetic className='p-5'>
                   <p className='text-lg capitalize'>{title}</p>
                   <div className='flex items-center justify-center'>
                     <Dot className={`${router.startsWith(href) ? 'scale-100' : 'scale-0'} transition-transform duration-200 ease-in-out group-hover:scale-100 size-8`} />
                   </div>
-                </MagneticButton>
+                </Magnetic>
               </Link>
             </li>
           );

@@ -2,7 +2,7 @@
 
 import { CharTyping, SkillDetailCard } from '@/components';
 import { randomId } from '@/utils';
-import { extraSummary, frontendSummary, skillDesc } from '@/data';
+import { extraSummary, frontendSummary } from '@/data';
 
 export function AboutSkill() {
   return (

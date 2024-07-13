@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-import { MagneticButton } from '@/components';
+import { Magnetic } from '@/components';
 import { socialMedias } from '@/data';
 import { randomId } from '@/utils';
 
@@ -24,9 +24,9 @@ export function SocialInfo() {
                   className='border-b border-solid border-b-transparent transition-all duration-300 ease-in-expo hover:border-b-border'
                 >
                   <Link href={href} target='_blank' rel='noopener' passHref className='group'>
-                    <MagneticButton className='relative py-2 uppercase text-lg font-normal cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-gray-700 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-gray-700 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]'>
+                    <Magnetic className='relative py-2 uppercase text-lg font-normal cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-200 before:absolute before:bg-gray-700 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-200 after:absolute after:bg-gray-700 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]'>
                       {title}
-                    </MagneticButton>
+                    </Magnetic>
                   </Link>
                 </li>
               );

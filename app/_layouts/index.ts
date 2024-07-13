@@ -1,5 +1,4 @@
 // common
-export * from './transition';
 export * from './navbar';
 export * from './contact';
 

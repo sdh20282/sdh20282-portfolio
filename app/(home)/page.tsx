@@ -3,7 +3,6 @@
 import { useRef } from "react";
 
 import {
-  PageTransition,
   Navbar,
   HomeHeader,
   HomeIntroduce,
@@ -15,7 +14,7 @@ export default function Page() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <PageTransition>
+    <>
       <Navbar />
       <HomeHeader />
       <main ref={containerRef}>
@@ -23,6 +22,6 @@ export default function Page() {
         <HomeRecentWorks />
         <HomeProjectThumbnails />
       </main>
-    </PageTransition>
+    </>
   );
 }

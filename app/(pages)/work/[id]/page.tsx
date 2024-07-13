@@ -1,5 +1,4 @@
 import { 
-  PageTransition,
   Navbar,
 } from "@/layouts";
 import { projectDetail } from "@/data";
@@ -25,7 +24,7 @@ export default function WorkDetail({
   const project = projectDetail[params.id];
 
   return (
-    <PageTransition>
+    <>
       <Navbar />
       <FramerWrapper
         title={project.title}
@@ -39,7 +38,7 @@ export default function WorkDetail({
         role={project.role}
         learns={project.learns}
       />
-    </PageTransition>
+    </>
   )
 }
 

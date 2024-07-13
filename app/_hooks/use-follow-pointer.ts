@@ -4,7 +4,7 @@ import { RefObject, useCallback, useEffect, useRef, useState } from 'react';
 
 import { gsap } from 'gsap';
 
-export function useRecentWorkFollowPointer({ modal, cursor, label }: { 
+export function useFollowPointer({ modal, cursor, label }: { 
   modal: RefObject<HTMLDivElement>, 
   cursor: RefObject<HTMLDivElement>,
   label : RefObject<HTMLDivElement>,

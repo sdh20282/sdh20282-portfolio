@@ -1,13 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 
-import { thumbnailOptions } from "@/data";
-import { useEffect, useState } from "react";
-
-const List = ({ props: {
+function List({ props: {
   handlePointerEnter,
   handlePointerLeave,
   moveItems,
@@ -25,7 +23,7 @@ const List = ({ props: {
     id: number,
     checked: boolean,
   }
-}) => {
+}) {
   return (
     <li
       className='border-t border-[#999] last-of-type:border-b transition-all cursor-pointer group animate-thumbnailAppear translate-y-[300px]'
@@ -50,7 +48,7 @@ const List = ({ props: {
   )
 }
 
-export function ThumbnailList({
+export function WorkList({
   handlePointerEnter,
   handlePointerLeave,
   moveItems,

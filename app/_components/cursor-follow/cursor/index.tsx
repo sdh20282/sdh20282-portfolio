@@ -4,9 +4,16 @@ import { LegacyRef, forwardRef } from 'react';
 
 import { Variants, motion } from 'framer-motion';
 
-function ThumbnailCursorCircleFunc (
-  { variants, active, ...props }: { variants: Variants, active: boolean }, 
-  ref: LegacyRef<HTMLDivElement>
+function _CursorFollowCircle ({
+  variants,
+  active,
+  ...props
+}: {
+  variants:
+  Variants,
+  active:
+  boolean
+}, ref: LegacyRef<HTMLDivElement>
 ) {
   return (
     <motion.div
@@ -20,10 +27,17 @@ function ThumbnailCursorCircleFunc (
   );
 }
 
-export const ThumbnailCursorCircle = forwardRef(ThumbnailCursorCircleFunc);
+export const CursorFollowCircle = forwardRef(_CursorFollowCircle);
 
-function ThumbnailCursorLabelFunc (
-  { children, variants, active, ...props }: { children: React.ReactNode, variants: Variants, active: boolean }, 
+function _CursorFollowLabel ({
+  children,
+  variants,
+  active,
+  ...props
+}: {
+  children: React.ReactNode,
+  variants: Variants,
+  active: boolean }, 
   ref: LegacyRef<HTMLDivElement>
 ) {
   return (
@@ -40,4 +54,4 @@ function ThumbnailCursorLabelFunc (
   );
 }
 
-export const ThumbnailCursorLabel = forwardRef(ThumbnailCursorLabelFunc);
+export const CursorFollowLabel = forwardRef(_CursorFollowLabel);

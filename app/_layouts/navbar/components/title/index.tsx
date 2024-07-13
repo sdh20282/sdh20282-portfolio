@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 import { Code } from 'lucide-react';
 
-import { MagneticButton } from '@/components';
+import { Magnetic } from '@/components';
 
 export function NavbarTitle() {
   return (
     <Link href="/" className='group cursor-pointer'>
-      <MagneticButton className='p-5 flex'>
+      <Magnetic className='p-5 flex'>
         <div className='transition-transform duration-500 ease-in-out group-hover:animate-pulse'>
           <Code />
         </div>
@@ -24,7 +24,7 @@ export function NavbarTitle() {
             Seo
           </p>
         </div>
-      </MagneticButton>
+      </Magnetic>
     </Link>
   );
 }
