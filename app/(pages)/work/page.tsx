@@ -1,20 +1,21 @@
-// import { 
-//   // Transition,
-//   Navbar,
-// } from "@/layouts";
+import { 
+  Navbar,
+  WorkContent,
+  WorkHeader,
+} from "@/layouts";
 
-import { notFound } from "next/navigation";
-
-// export const metadata = {
-//   title: "Work",
-// }
+export const metadata = {
+  title: "Work",
+}
 
 export default function Work() {
-  return notFound();
-  // return (
-  //   <div>
-  //     <Navbar />
-  //     <div className="text-white">works</div>
-  //   </div>
-  // )
+  return (
+    <div>
+      <Navbar />
+      <WorkHeader />
+      <main>
+        <WorkContent />
+      </main>
+    </div>
+  )
 }

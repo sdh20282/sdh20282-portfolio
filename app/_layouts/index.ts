@@ -16,6 +16,8 @@ export * from './about-skill';
 export * from './about-experience';
 
 // work
+export * from './work-header';
+export * from './work-content';
 
 // work detail
 export * from './detail-header';

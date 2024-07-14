@@ -23,7 +23,7 @@ const gothicA1 = Gothic_A1({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | sdh20282's Portfolio",
+    template: "%s - sdh20282",
     default: "sdh20282's Portfolio",
   },
   description: "sdh20282's portfolio",

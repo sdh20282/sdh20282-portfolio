@@ -1,29 +1,5 @@
 import { JettyPreview, NashdaPreview, TalkidsPreview } from '@/assets';
 
-export const projectDesc = `제가 진행한 프로젝트 중 개인적으로 성과나 성장이 있었다고 생각한 프로젝트들입니다.
-결과물에 대한 화면과 고민했던 점을 확인할 수 있습니다.`;
-
-export const projectList = [
-  {
-    name: 'Jetty Chart',
-    desc: 'React/Next.js에서 사용 가능한 차트 라이브러리',
-    role: 'Development',
-    link: 'jetty-chart',
-  },
-  {
-    name: '내쉬다',
-    desc: '실어증 환자들을 위한 재활 서비스',
-    role: 'Development',
-    link: 'nashda',
-  },
-  {
-    name: 'Talkids',
-    desc: '초등학생/중학생을 위한 언어 교류 플랫폼',
-    role: 'Development',
-    link: 'talkids',
-  }
-];
-
 export const projectDetail = {
   'jetty-chart': {
     title: "Jetty Chart",
@@ -267,21 +243,45 @@ export const projectDetail = {
   }
 };
 
-export const thumbnailOptions = [
+export const recentWorkOptions = [
   {
     title: 'Jetty Chart',
     link: 'jetty-chart',
     image: JettyPreview,
+    year: '2023',
   },
   {
     title: '내쉬다',
     link: 'nashda',
     image: NashdaPreview,
+    year: '2023',
   },
   {
     title: 'Talkids',
     link: 'talkids',
     image: TalkidsPreview,
+    year: '2023',
+  }
+];
+
+export const moreWorkOptions = [
+  {
+    title: 'Jetty Chart',
+    link: 'jetty-chart',
+    image: JettyPreview,
+    year: '2023',
+  },
+  {
+    title: '내쉬다',
+    link: 'nashda',
+    image: NashdaPreview,
+    year: '2023',
+  },
+  {
+    title: 'Talkids',
+    link: 'talkids',
+    image: TalkidsPreview,
+    year: '2023',
   }
 ];
 

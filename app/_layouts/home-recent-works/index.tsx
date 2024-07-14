@@ -1,12 +1,11 @@
 "use client";
 
 import { useRef } from 'react';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 import { useFollowPointer } from '@/hooks';
-// import { MagneticButton } from '@/components';
-import { thumbnailOptions } from '@/data';
-
+import { Magnetic } from '@/components';
+import { recentWorkOptions } from '@/data';
 import {
   CursorFollowCircle,
   CursorFollowLabel,
@@ -60,14 +59,14 @@ export function HomeRecentWorks() {
           handlePointerEnter={handlePointerEnter}
           handlePointerLeave={handlePointerLeave}
           moveItems={moveItems}
-          options={thumbnailOptions}
+          options={recentWorkOptions}
         />
         <CursorFollowModal
           ref={modal}
           variants={scaleUp}
           active={active}
           index={index}
-          options={thumbnailOptions}
+          options={recentWorkOptions}
         />
         <CursorFollowCircle
           ref={cursor}
@@ -82,7 +81,7 @@ export function HomeRecentWorks() {
           <span>View</span>
         </CursorFollowLabel>
       </div>
-      {/* <MagneticButton className='w-fit mx-auto mt-[100px]'>
+      <Magnetic className='w-fit mx-auto mt-[100px]'>
         <Link
           href="/work" 
           className='
@@ -91,11 +90,11 @@ export function HomeRecentWorks() {
             after:w-[170px] after:h-[125px] after:absolute after:-top-[125px] after:left-0 after:bg-[#04ffd5] after:rounded-[50%] after:transition-all after:duration-300 after:delay-0 hover:after:-top-[25px] hover:after:duration-0 hover:after:delay-300
           '
         >
-          <MagneticButton className='absolute w-full h-[70px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center'>
+          <Magnetic className='absolute w-full h-[70px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center'>
             <span className='text-sm'>More Work</span>
-          </MagneticButton>
+          </Magnetic>
         </Link>
-      </MagneticButton> */}
+      </Magnetic>
     </section >
   );
 }
