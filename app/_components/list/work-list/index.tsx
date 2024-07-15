@@ -42,7 +42,7 @@ function List({ props: {
         moveItems(clientX, clientY);
       }}
     >
-      <Link href={`/work/${link}`} className='flex justify-between items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[50px] md:py-[75px] group-hover:px-[5vw] group-hover:text-[#777]'>
+      <Link href={`/work/${link}`} className='flex justify-between items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[50px] md:py-[75px] group-hover:px-[5vw] group-hover:text-[#777]' passHref>
         <p className="text-3xl md:text-4xl xl:text-5xl">{title}</p>
         <p className='text-sm md:text-2xl'>{year}</p>
       </Link>

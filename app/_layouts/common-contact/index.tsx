@@ -6,7 +6,7 @@ import { motion, useMotionTemplate, useScroll, useTransform } from 'framer-motio
 
 import { Content, SocialInfo } from './components';
 
-export function Contact() {
+export function CommonContact() {
   const target = useRef(null);
 
   const minHeight = 550;

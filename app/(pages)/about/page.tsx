@@ -1,5 +1,4 @@
-import { 
-  Navbar,
+import {
   AboutHeader,
   AboutTransitionContainer,
   AboutExperience,
@@ -12,7 +11,6 @@ export const metadata = {
 export default function About() {
   return (
     <>
-      <Navbar />
       <AboutHeader />
       <main className="">
         <AboutTransitionContainer />

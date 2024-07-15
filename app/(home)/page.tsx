@@ -3,7 +3,6 @@
 import { useRef } from "react";
 
 import {
-  Navbar,
   HomeHeader,
   HomeIntroduce,
   HomeProjectThumbnails,
@@ -15,7 +14,6 @@ export default function Page() {
 
   return (
     <>
-      <Navbar />
       <HomeHeader />
       <main ref={containerRef}>
         <HomeIntroduce target={containerRef} />

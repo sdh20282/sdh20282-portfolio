@@ -25,6 +25,7 @@ export function ProjectSlider({
         className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
       />
     ) : null;
+  
   const video =
     type === 'video' ? (
       <video
@@ -45,7 +46,7 @@ export function ProjectSlider({
         {image}
         {video}
       </div>
-      <Link href={link} className="w-full h-full absolute top-0 left-0 bg-[#232727] transition-all duration-300 bg-opacity-0 *:opacity-0 group-hover:bg-opacity-85 group-hover:*:opacity-100" target='_blank'>
+      <Link href={link} className="w-full h-full absolute top-0 left-0 bg-[#232727] transition-all duration-300 bg-opacity-0 *:opacity-0 group-hover:bg-opacity-85 group-hover:*:opacity-100" target='_blank' rel='noopener' passHref>
         <div className="w-full h-full font-nanumsquare text-white transition-all duration-300 flex flex-col items-center justify-center gap-[10px]">
           <span className='text-xl font-bold'>{title}</span>
           <span className='text-sm'>{description}</span>

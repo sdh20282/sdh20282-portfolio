@@ -8,7 +8,7 @@ import { Magnetic } from '@/components';
 
 export function NavbarTitle() {
   return (
-    <Link href="/" className='group cursor-pointer'>
+    <Link href="/" className='group cursor-pointer' passHref>
       <Magnetic className='p-5 flex'>
         <div className='transition-transform duration-500 ease-in-out group-hover:animate-pulse'>
           <Code />

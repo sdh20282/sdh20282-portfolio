@@ -1,5 +1,4 @@
 import { 
-  Navbar,
   WorkContent,
   WorkHeader,
 } from "@/layouts";
@@ -11,7 +10,6 @@ export const metadata = {
 export default function Work() {
   return (
     <div>
-      <Navbar />
       <WorkHeader />
       <main>
         <WorkContent />

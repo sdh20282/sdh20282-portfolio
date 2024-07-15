@@ -1,6 +1,7 @@
 // common
-export * from './navbar';
-export * from './contact';
+export * from './common-navbar';
+export * from './common-menu';
+export * from './common-contact';
 
 // home
 export * from './home-header';

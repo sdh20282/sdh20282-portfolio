@@ -10,7 +10,7 @@ import { navItems } from '@/data';
 import { randomId } from '@/utils';
 
 export function NavbarList() {
-  const router = usePathname();
+  const pathname = usePathname();
 
   return (
     <ul className='flex items-center max-lg:hidden'>
@@ -22,7 +22,7 @@ export function NavbarList() {
                 <Magnetic className='p-5'>
                   <p className='text-lg capitalize'>{title}</p>
                   <div className='flex items-center justify-center'>
-                    <Dot className={`${router.startsWith(href) ? 'scale-100' : 'scale-0'} transition-transform duration-200 ease-in-out group-hover:scale-100 size-8`} />
+                    <Dot className={`${pathname === href ? 'scale-100' : 'scale-0'} transition-transform duration-200 ease-in-out group-hover:scale-100 size-8`} />
                   </div>
                 </Magnetic>
               </Link>

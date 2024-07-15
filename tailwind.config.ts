@@ -23,10 +23,6 @@ const config: Config = {
         rubik: "var(--font-rubik)",
         nanumsquare: "var(--font-nanumsquare)",
         alliance: "var(--font-alliance)",
-
-
-        ibmkr: "var(--ibm-kr-text)",
-        gothica1: "var(--gothic-ai-text)",
       },
       gridTemplateColumns: {
         'auto-fit-100': 'repeat(auto-fit, minmax(100px, 1fr))',

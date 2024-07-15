@@ -19,44 +19,6 @@ export function HomeProjectThumbnails() {
   const transformX1 = useTransform(scrollYProgress, [0, 1], [-250, 0]);
   const transformX2 = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
-  const firstSlider = projectOptions.first.map(({
-    type,
-    source,
-    title,
-    description,
-    link,
-  }: {
-    type: string,
-    source: string,
-    title: string,
-    description: string,
-    link: string,
-  }) => {
-    const id = randomId();
-    return (
-      <ProjectSlider key={id} type={type} source={source} title={title} description={description} link={link}/>
-    );
-  });
-
-  const secondSlider = projectOptions.second.map(({
-    type,
-    source,
-    title,
-    description,
-    link,
-  }: {
-    type: string,
-    source: string,
-    title: string,
-    description: string,
-    link: string,
-  }) => {
-    const id = randomId();
-    return (
-      <ProjectSlider key={id} type={type} source={source} title={title} description={description} link={link}/>
-    );
-  });
-
   return (
     <section ref={target} className='relative pt-[200px] pb-[250px]'>
       <div className='grid items-center'>
@@ -67,7 +29,25 @@ export function HomeProjectThumbnails() {
               x: transformX1,
             }}
           >
-            {firstSlider}
+            {
+              projectOptions.first.map(({
+                type,
+                source,
+                title,
+                description,
+                link,
+              }: {
+                type: string,
+                source: string,
+                title: string,
+                description: string,
+                link: string,
+              }) => {
+                return (
+                  <ProjectSlider key={randomId()} type={type} source={source} title={title} description={description} link={link}/>
+                );
+              })
+            }
           </motion.div>
           <motion.div
             className='flex gap-4 md:gap-6 lg:gap-8 xl:gap-10 w-[120vw]'
@@ -75,7 +55,25 @@ export function HomeProjectThumbnails() {
               x: transformX2,
             }}
           >
-            {secondSlider}
+            {
+              projectOptions.second.map(({
+                type,
+                source,
+                title,
+                description,
+                link,
+              }: {
+                type: string,
+                source: string,
+                title: string,
+                description: string,
+                link: string,
+              }) => {
+                return (
+                  <ProjectSlider key={randomId()} type={type} source={source} title={title} description={description} link={link}/>
+                );
+              })
+            }
           </motion.div>
         </div>
       </div>
