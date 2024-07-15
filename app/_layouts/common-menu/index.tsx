@@ -16,7 +16,7 @@ export function CommonMenu() {
   }, [pathname]);
 
   return (
-    <div>
+    <div className="hidden md:block">
       <AnimatePresence mode='wait'>
         {isOpen ? <MenuBody /> : null}
       </AnimatePresence>
