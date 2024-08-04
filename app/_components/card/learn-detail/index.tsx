@@ -42,8 +42,8 @@ export function LearnDetail({
       whileInView='visible'
       className="flex-grow flex-shrink-0 basis-0"
     >
-      <p className='font-nanumsquare text-white text-lg xl:text-xl'>{main}</p>
-      <div className='text-white mt-5 flex flex-col gap-1'>
+      <p className='font-nanumsquare text-white text-2xl'>{main}</p>
+      <div className='text-[#ddd] mt-[32px] flex flex-col gap-[10px]'>
         {
           sub.map(line => {
             return (
