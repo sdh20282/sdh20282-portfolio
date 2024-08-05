@@ -43,11 +43,11 @@ export function MenuToggle({
             <span
               className={`
                 w-[28px] h-[12px] relative
-                before:w-full before:h-[1px] before:absolute before:block before:bg-white before:transition-all before:duration-300
-                after:w-full after:h-[1px] after:absolute after:block after:bg-white after:transition-all after:duration-300
+                before:w-full before:h-[1px] before:absolute before:block before:transition-all before:duration-300
+                after:w-full after:h-[1px] after:absolute after:block after:transition-all after:duration-300
                 before:top-0 after:bottom-0
                 group-hover:before:bg-black group-hover:after:bg-black
-                ${isOpen && 'before:-rotate-45 before:top-1/2 before:-translate-y-1/2 after:rotate-45 after:top-1/2 after:-translate-y-1/2 before:bg-black after:bg-black'}
+                ${isOpen ? 'before:-rotate-45 before:top-1/2 before:-translate-y-1/2 after:rotate-45 after:top-1/2 after:-translate-y-1/2 before:bg-black after:bg-black' : 'before:bg-white after:bg-white'}
               `}
             />
           </Magnetic>
