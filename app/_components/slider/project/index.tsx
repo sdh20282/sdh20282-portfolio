@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export function ProjectSlider({
+export async function ProjectSlider({
   type,
   source,
   title,
@@ -22,6 +22,7 @@ export function ProjectSlider({
         sizes="90vw"
         width={500}
         height={300}
+        unoptimized
         className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
       />
     ) : null;

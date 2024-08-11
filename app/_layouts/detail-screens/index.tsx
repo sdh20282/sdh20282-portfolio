@@ -54,6 +54,7 @@ function ProjectImage({
         sizes="90vw"
         width={500}
         height={300}
+        unoptimized
         className="w-full h-full group-hover:scale-105 transition-all duration-300"
       />
       <div className="w-full h-full absolute top-0 left-0 bg-[#232727] transition-all duration-300 bg-opacity-0 *:opacity-0 group-hover:bg-opacity-75 group-hover:*:opacity-100 flex items-center justify-center">
