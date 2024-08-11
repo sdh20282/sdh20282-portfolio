@@ -1,7 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
-export async function ProjectSlider({
+export function ProjectSlider({
   type,
   source,
   title,
@@ -22,7 +24,6 @@ export async function ProjectSlider({
         sizes="90vw"
         width={500}
         height={300}
-        unoptimized
         className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
       />
     ) : null;

@@ -39,7 +39,6 @@ export function DetailHilight({
                 sizes="100vw"
                 width={500}
                 height={300}
-                unoptimized
                 className="w-full h-full object-contain"
               />
             </div>
