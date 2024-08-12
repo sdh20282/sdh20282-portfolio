@@ -79,6 +79,7 @@ export function AboutIntroduce() {
           alt='profile image'
           fill={true}
           className='object-cover'
+          placeholder="blur"
         />
       </div>
     </motion.section>

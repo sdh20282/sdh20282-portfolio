@@ -45,6 +45,7 @@ function _CursorFollowModal({
                   width={320}
                   height={320}
                   alt={`${title} thumbnail image`}
+                  placeholder='blur'
                 />
               </div>
             );
