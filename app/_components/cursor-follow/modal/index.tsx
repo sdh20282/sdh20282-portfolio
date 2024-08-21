@@ -1,6 +1,6 @@
 'use client';
 
-import { LegacyRef, forwardRef } from 'react';
+import { Ref, forwardRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 import { Variants, motion } from 'framer-motion';
@@ -18,7 +18,7 @@ function _CursorFollowModal({
   active: boolean,
   index: number,
   options: { title: string, image: StaticImageData }[]
-}, ref: LegacyRef<HTMLDivElement>) {
+}, ref: Ref<HTMLDivElement>) {
   return (
     <motion.div
       ref={ref}

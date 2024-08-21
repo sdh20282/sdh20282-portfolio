@@ -1,6 +1,6 @@
 'use client';
 
-import { LegacyRef, forwardRef } from 'react';
+import { Ref, forwardRef } from 'react';
 
 import { Variants, motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ function _CursorFollowCircle ({
   Variants,
   active:
   boolean
-}, ref: LegacyRef<HTMLDivElement>
+}, ref: Ref<HTMLDivElement>
 ) {
   return (
     <motion.div
@@ -38,7 +38,7 @@ function _CursorFollowLabel ({
   children: React.ReactNode,
   variants: Variants,
   active: boolean }, 
-  ref: LegacyRef<HTMLDivElement>
+  ref: Ref<HTMLDivElement>
 ) {
   return (
     <motion.div
