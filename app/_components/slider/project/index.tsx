@@ -20,12 +20,12 @@ export function ProjectSlider({
     type === 'image' ? (
       <Image
         src={source}
-        alt={''}
-        sizes="90vw"
-        width={500}
-        height={300}
+        alt={title}
+        fill
         unoptimized
-        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
+        className="object-cover"
+        placeholder="blur"
+        blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
       />
     ) : null;
   
@@ -45,7 +45,7 @@ export function ProjectSlider({
 
   return (
     <div className='py-[23px] px-[15px] bg-[#343f45] flex items-center justify-center relative w-1/4 rounded min-w-[150px] h-[20vw] group'>
-      <div className='relative w-full h-full overflow-hidden'>
+      <div className='relative w-full aspect-video overflow-hidden'>
         {image}
         {video}
       </div>

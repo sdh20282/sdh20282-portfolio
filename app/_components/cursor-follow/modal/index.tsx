@@ -38,14 +38,15 @@ function _CursorFollowModal({
         {
           options.map(({ title, image }) => {
             return (
-              <div key={randomId()} className='flex items-center justify-center h-full w-full object-cover'>
+              <div key={randomId()} className='relative w-full aspect-video overflow-hidden'>
                 <Image
                   src={image}
-                  className='w-full h-full'
-                  width={320}
-                  height={320}
                   alt={`${title} thumbnail image`}
-                  placeholder='blur'
+                  fill
+                  sizes='50vw'
+                  className="object-cover"
+                  placeholder="blur"
+                  blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
                 />
               </div>
             );

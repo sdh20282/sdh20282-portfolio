@@ -42,7 +42,7 @@ function ProjectImage({
   
   return (
     <motion.div
-      className="relative w-full overflow-hidden group rounded-md"
+      className="relative w-full aspect-video overflow-hidden group rounded-md"
       variants={reveal}
       viewport={{ once: true }}
       initial='hidden'
@@ -51,11 +51,11 @@ function ProjectImage({
       <Image 
         src={image.src}
         alt={image.name}
-        sizes="90vw"
-        width={500}
-        height={300}
+        fill
         unoptimized
-        className="w-full h-full group-hover:scale-105 transition-all duration-300"
+        className="object-cover"
+        placeholder="blur"
+        blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
       />
       <div className="w-full h-full absolute top-0 left-0 bg-[#232727] transition-all duration-300 bg-opacity-0 *:opacity-0 group-hover:bg-opacity-75 group-hover:*:opacity-100 flex items-center justify-center">
         <span className="font-nanumsquare text-white text-xl transition-all duration-300">{image.name}</span>
