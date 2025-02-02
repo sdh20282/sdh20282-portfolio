@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 import { usePreviousValue } from '@/hooks';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export function FrozenRouter(props: { children: React.ReactNode }) {
   const context = useContext(LayoutRouterContext);
   const prevContext = usePreviousValue(context) || null;
+
+  const pathname = usePathname();
+  const prevPathname = usePreviousValue(pathname);
  
-  const segment = useSelectedLayoutSegment();
-  const prevSegment = usePreviousValue(segment);
- 
-  const changed = segment !== prevSegment && segment !== undefined && prevSegment !== undefined;
+  const changed = pathname !== prevPathname && pathname !== undefined && prevPathname !== undefined;
  
   return (
     <LayoutRouterContext.Provider value={changed ? prevContext : context}>
