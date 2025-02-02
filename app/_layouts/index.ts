@@ -28,3 +28,6 @@ export * from './detail-screens';
 export * from './detail-hilight';
 export * from './detail-role';
 export * from './detail-learns';
+
+// career
+export * from './career-header';

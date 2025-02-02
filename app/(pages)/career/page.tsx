@@ -1,3 +1,13 @@
+import { CareerHeader } from "@/layouts";
+
+export const metadata = {
+  title: "Career",
+}
+
 export default function Career() {
-  return <div></div>
+  return (
+    <div>
+      <CareerHeader />
+    </div>
+  )
 }
