@@ -296,7 +296,7 @@ export const projectOptions = {
   first: [
     {
       type: 'image',
-      source: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/talkids.gif',
+      source: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/thumbnail/talkids.gif',
       title: "Talkids",
       description: "초등학생/중학생을 위한 언어 교류 플랫폼",
       link: "https://github.com/Talkids/Talkids",
@@ -310,7 +310,7 @@ export const projectOptions = {
     },
     {
       type: 'image',
-      source: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/jetty-chart.gif',
+      source: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/thumbnail/jetty-chart.gif',
       title: "Jetty Chart",
       description: "React/Next.js에서 사용 가능한 차트 라이브러리",
       link: "https://github.com/sdh20282/jetty-chart",
@@ -347,7 +347,7 @@ export const projectOptions = {
     },
     {
       type: 'image',
-      source: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/nashda.gif',
+      source: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/thumbnail/nashda.gif',
       title: "내쉬다",
       description: "실어증 환자들을 위한 재활 서비스",
       link: "https://github.com/D105-SSAFY/NASHDA",
