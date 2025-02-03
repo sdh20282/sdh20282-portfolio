@@ -31,3 +31,4 @@ export * from './detail-learns';
 
 // career
 export * from './career-header';
+export * from './career-content';
