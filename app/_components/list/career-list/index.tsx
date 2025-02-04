@@ -45,6 +45,7 @@ function List({
           <span>{detail.period.from}</span>
           <span>~</span>
           <span>{detail.period.to}</span>
+          <span>{`, ${detail.position}`}</span>
         </p>
       </button>
       {
