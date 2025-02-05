@@ -87,7 +87,7 @@ export function HomeRecentWorks() {
     >
       <header className='w-full uppercase text-[#04ffd5] text-sm'>
         <h2>
-          <WordMove paragraph={'Recent Works'} gap={10} />
+          <WordMove paragraph={'Recent Works'} gap={4} />
         </h2>
       </header>
       <RecentWorkList />

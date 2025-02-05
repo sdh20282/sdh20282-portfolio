@@ -67,7 +67,7 @@ export function WorkContent() {
       animate='enter'
       onPointerMove={({ clientX, clientY }) => moveItems(clientX, clientY)}
     >
-      <div className="w-full flex justify-between px-[7vw] uppercase pb-[25px] text-[#777] text-sm font-rubik">
+      <div className="w-full flex justify-between px-[7vw] uppercase pb-[25px] text-[#777] text-sm font-rubik font-medium">
         <span>title</span>
         <span>year</span>
       </div>
