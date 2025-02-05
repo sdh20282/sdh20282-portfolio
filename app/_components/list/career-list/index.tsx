@@ -136,9 +136,8 @@ function List({
           variants={appearHover}
           animate={hover || active ? 'enter' : 'closed'}
         >
-          <TitleSlider repeat={24} baseVelocity={1}>
-            <span 
-              // className={`pe-12 ${selected && 'text-[#aaa]'}`} 
+          <TitleSlider repeat={24} baseVelocity={0.5}>
+            <span
               className={`pe-12`} 
               style={{
                 transition: 'all 300'

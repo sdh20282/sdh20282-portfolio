@@ -84,7 +84,7 @@ function List({
           variants={appearHover}
           animate={hover ? 'enter' : 'closed'}
         >
-          <TitleSlider repeat={24} baseVelocity={1}>
+          <TitleSlider repeat={24} baseVelocity={0.5}>
             <span
               className={`pe-12`} 
               style={{
