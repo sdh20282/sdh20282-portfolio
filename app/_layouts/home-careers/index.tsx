@@ -30,48 +30,6 @@ const appearHover = {
   }
 }
 
-const appearContent = {
-  initial: {
-    height: 0,
-  },
-  enter: {
-    height: 'auto',
-    transition: { 
-      duration: 0.6,
-      ease: [0.33, 1, 0.68, 1],
-    },
-  },
-  closed: {
-    height: 0,
-    transition: { 
-      duration: 0.6,
-      ease: [0.33, 1, 0.68, 1],
-      delay: 0.6,
-    },
-  }
-}
-
-const appearDetail = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: { 
-      duration: 0.6,
-      ease: [0.33, 1, 0.68, 1],
-      delay: 0.6
-    },
-  },
-  closed: {
-    opacity: 0,
-    transition: { 
-      duration: 0.6,
-      ease: [0.33, 1, 0.68, 1],
-    },
-  }
-}
-
 function List({
   name,
   id,
