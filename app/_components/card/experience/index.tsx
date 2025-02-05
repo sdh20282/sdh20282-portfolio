@@ -83,7 +83,8 @@ export function ExperienceCard({
         initial='hidden'
         whileInView='visible'
         className='border-b border-[#777]'
-      /><div className="font-gothica1 text-base leading-6 text-white tracking-wide">
+      />
+      <div className="font-gothica1 text-base leading-6 text-white tracking-wide">
         <motion.div 
           className="py-16 font-bold text-xl lg:text-2xl xl:text-3xl"
           custom={index}
@@ -102,7 +103,7 @@ export function ExperienceCard({
           <span className="text-[#999] text-xs mt-2 block w-full">{experience.duration}</span>
         </motion.div>
         <motion.div
-          custom={index + 0.3}
+          custom={index + 0.2}
           variants={revealContent}
           viewport={{ once: true }}
           initial='hidden'
@@ -122,7 +123,7 @@ export function ExperienceCard({
           experience.activities &&
           <motion.div
             className="mt-12 flex flex-col gap-1"
-            custom={index + 0.6}
+            custom={index + 0.4}
             variants={revealContent}
             viewport={{ once: true }}
             initial='hidden'

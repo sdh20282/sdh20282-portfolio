@@ -11,7 +11,7 @@ export function SkillDetailCard({
   percentage,
   color,
   index,
-  delay = 0.1,
+  delay = 1,
  }: {
   name: string,
   percentage: number,
@@ -19,15 +19,70 @@ export function SkillDetailCard({
   index: number,
   delay?: number,
  }) {
-  const progress = Math.floor(percentage / 5);
-  const progressDuration = 0.02;
-  const progressColors = new Array(20).fill(0).map((_, index) => {
-    return index < progress ? color : '#777';
-  });
-
   const revealCard = {
     hidden: {
-      y: '100px',
+      opacity: 0,
+    },
+    visible: (i: number) => ({
+      opacity: 1,
+      transition: {
+        delay: delay * (i),
+        duration: delay,
+      },
+    })
+  };
+
+  const revealTitle = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: (i: number) => ({
+      opacity: 1,
+      transition: {
+        delay: delay * i,
+        type: "spring",
+        stiffness: 200,
+        damping: 50
+      },
+    })
+  };
+
+  const revealPercent = {
+    hidden: (i: number) => ({
+      backgroundColor: color,
+      x: '-100%',
+    }),
+    visible: (i: number) => {
+      console.log(delay * 0.9 * (percentage / 100));
+      
+
+      return {
+        backgroundColor: color,
+        x: '0%',
+        transition: {
+          delay: (delay * i),
+          duration: delay * (percentage / 100),
+        },
+      }
+    }
+  };
+
+  const revealPercentageBackground = {
+    hidden:{
+      x: '-100%',
+    },
+    visible: (i: number) => ({
+      x: '0%',
+      transition: {
+        delay: (delay * i),
+        duration: delay,
+      },
+    })
+  }
+
+  const revealContent = {
+    hidden: {
+      y: '10px',
       opacity: 0,
     },
     visible: (i: number) => ({
@@ -37,76 +92,66 @@ export function SkillDetailCard({
         delay: delay * i,
         type: "spring",
         stiffness: 200,
-        damping: 18
-      },
-    })
-  };
-
-  const revealPercent = {
-    hidden: {
-      y: '0px',
-      backgroundColor: '#777',
-    },
-    visible: (i: number) => ({
-      y: '0px',
-      backgroundColor: progressColors[i],
-      transition: {
-        delay: (delay * (i + 1)) + (progressDuration * i),
-        type: "spring",
-        stiffness: 200,
         damping: 50
       },
     })
   };
 
   return (
-    <motion.div
-      custom={index}
-      variants={revealCard}
-      viewport={{ once: true }}
-      initial='hidden'
-      whileInView='visible'
-      className="
-        w-full flex flex-col 
-      "
+    <div
+      className="w-full flex flex-col overflow-hidden"
     >
-      <div 
-        className="
-          relative
-          text-base lg:text-xl
-          mb-5
-        "
+      <motion.div
+        custom={index}
+        variants={revealTitle}
+        viewport={{ once: true }}
+        initial='hidden'
+        whileInView='visible'
+        className="relative text-base lg:text-xl mb-5"
       >
         <p>{name}</p>
-      </div>
-      <div className="flex gap-[2px] mb-8">
-        {
-          new Array(20).fill(0).map((_, index) => {
-            return (
-              <motion.div 
-                key={randomId()} 
-                custom={index}
-                variants={revealPercent}
-                viewport={{ once: true }}
-                initial='hidden'
-                whileInView='visible'
-                className='w-full rounded-[1px] opacity-75 bg-[#555] h-[4px] lg:h-[6px]'
-              />
-            )
-          })
-        }
+      </motion.div>
+      <div className="w-full mb-8 relative">
+        <motion.div
+          custom={index}
+          variants={revealPercent}
+          viewport={{ once: true }}
+          initial='hidden'
+          whileInView='visible'
+          className='absolute top-0 left-0 h-[4px] rounded-sm z-50'
+          style={{
+            width: `${percentage}%`,
+          }}
+        />
+        <motion.div
+          className="absolute top-0 left-0 w-full h-[4px] rounded-sm bg-[#777]"
+          custom={index}
+          variants={revealPercentageBackground}
+          viewport={{ once: true }}
+          initial='hidden'
+          whileInView='visible'
+        />
       </div>
       <div className="text-sm hidden md:flex flex-col gap-2">
         {
           // @ts-ignore
-          skillOptions[name].split('\n').map(line => {
+          skillOptions[name].split('\n').map((line, i) => {
             return (
-              <ListText key={randomId()} text={line} />
+              <motion.div
+                key={randomId()}
+                custom={index + i * 0.2}
+                variants={revealContent}
+                viewport={{ once: true }}
+                initial='hidden'
+                whileInView='visible'
+              >
+                <ListText text={line} />
+              </motion.div>
             )
           })
         }
       </div>
       
-    </motion.div>
+    </div>
   )
 }
