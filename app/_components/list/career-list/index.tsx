@@ -88,7 +88,7 @@ function List({
   const [hover, setHover] = useState(false);
 
   const detail = careerDetail[name as keyof typeof careerDetail];
-  const active = selected === name;
+  const active = selected === name;  
 
   const handleClickName = () => {
     setSelected(selected === name ? '' : name);
@@ -117,7 +117,7 @@ function List({
         onMouseLeave={handleHoverEnd}
       >
         <button
-          className={`w-full flex flex-col items-start md:flex-row justify-between md:items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[50px] md:py-[75px] group-hover:text-[#666] ${active && 'text-[#666]'}`}
+          className={`w-full flex flex-col items-start md:flex-row justify-between md:items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[50px] md:py-[75px] group-hover:text-[#666] ${active && '!text-[#666]'}`}
           onClick={handleClickName}
         >
           <p className="flex flex-col text-left gap-1 lg:gap-3">
