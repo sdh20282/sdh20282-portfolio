@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import Link from 'next/link';
 
 import { useFollowPointer } from '@/hooks';
-import { Magnetic } from '@/components';
+import { Magnetic, WordMove } from '@/components';
 import { recentWorkOptions } from '@/data';
 import {
   CursorFollowCircle,
@@ -29,7 +29,7 @@ const scaleUp = {
   },
 };
 
-export function HomeRecentWorks() {
+function RecentWorkList() {
   const modal = useRef<HTMLDivElement>(null);
   const cursor = useRef<HTMLDivElement>(null);
   const label = useRef<HTMLDivElement>(null);
@@ -46,41 +46,51 @@ export function HomeRecentWorks() {
   });
 
   return (
+    <div
+      className='flex flex-col w-full pt-[50px]' 
+      onPointerMove={({ clientX, clientY }) => moveItems(clientX, clientY)}
+    >
+      <WorkList
+        handlePointerEnter={handlePointerEnter}
+        handlePointerLeave={handlePointerLeave}
+        moveItems={moveItems}
+        options={recentWorkOptions}
+      />
+      <CursorFollowModal
+        ref={modal}
+        variants={scaleUp}
+        active={active}
+        index={index}
+        options={recentWorkOptions}
+      />
+      <CursorFollowCircle
+        ref={cursor}
+        variants={scaleUp}
+        active={active}
+      />
+      <CursorFollowLabel 
+        ref={label} 
+        variants={scaleUp} 
+        active={active}
+      >
+        <span>View</span>
+      </CursorFollowLabel>
+    </div>
+  );
+}
+
+export function HomeRecentWorks() {
+  return (
     <section
       id='projects'
       className='relative w-full px-[8vw] text-white flex flex-col z-30'
-      onPointerMove={({ clientX, clientY }) => moveItems(clientX, clientY)}
     >
       <header className='w-full uppercase text-[#04ffd5] text-sm'>
-        <h2>Recent Works</h2>
+        <h2>
+          <WordMove paragraph={'Recent Works'} gap={10} />
+        </h2>
       </header>
-      <div className='flex flex-col w-full mt-[50px]'>
-        <WorkList
-          handlePointerEnter={handlePointerEnter}
-          handlePointerLeave={handlePointerLeave}
-          moveItems={moveItems}
-          options={recentWorkOptions}
-        />
-        <CursorFollowModal
-          ref={modal}
-          variants={scaleUp}
-          active={active}
-          index={index}
-          options={recentWorkOptions}
-        />
-        <CursorFollowCircle
-          ref={cursor}
-          variants={scaleUp}
-          active={active}
-        />
-        <CursorFollowLabel 
-          ref={label} 
-          variants={scaleUp} 
-          active={active}
-        >
-          <span>View</span>
-        </CursorFollowLabel>
-      </div>
+      <RecentWorkList />
       <Magnetic className='w-fit mx-auto mt-[100px]'>
         <Link
           href="/work" 

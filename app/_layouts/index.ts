@@ -4,6 +4,7 @@ export * from './common-menu';
 export * from './common-contact';
 
 // home
+export * from './home-careers';
 export * from './home-header';
 export * from './home-introduce';
 export * from './home-recent-works';

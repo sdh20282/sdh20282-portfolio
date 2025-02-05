@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import {
   CareerList,
 } from "@/components";
+import { useSearchParams } from 'next/navigation';
 
 const slideUpContent = {
   initial: {
@@ -21,6 +22,10 @@ const slideUpContent = {
 };
 
 export function CareerContent() {
+  const searchParams = useSearchParams();
+
+  const target = searchParams.get('target');
+
   return (
     <motion.div
       className='flex flex-col w-full py-[150px] px-[8vw] text-white'
@@ -31,7 +36,7 @@ export function CareerContent() {
       <div className="w-full flex justify-between px-[7vw] uppercase pb-[25px] text-[#777] text-sm font-rubik">
         <span className='font-medium'>careers</span>
       </div>
-      <CareerList />
+      <CareerList target={target || ''} />
     </motion.div>
   )
 }

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 
 import {
+  HomeCareers,
   HomeHeader,
   HomeIntroduce,
   HomeProjectThumbnails,
@@ -17,6 +18,7 @@ export default function Page() {
       <HomeHeader />
       <main ref={containerRef}>
         <HomeIntroduce target={containerRef} />
+        <HomeCareers />
         <HomeRecentWorks />
         <HomeProjectThumbnails />
       </main>
