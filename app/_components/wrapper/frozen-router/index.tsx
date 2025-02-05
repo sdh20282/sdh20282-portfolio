@@ -20,6 +20,8 @@ export function FrozenRouter(props: { children: React.ReactNode }) {
       setIsAnimating(true);
       setTargetContext(prevContext);
     }
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, prevPathname]);
 
   useEffect(() => {

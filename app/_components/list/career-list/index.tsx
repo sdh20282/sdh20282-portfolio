@@ -104,13 +104,13 @@ function List({
 
   return (
     <li
-      id={name}
       className='border-t border-[#777] last-of-type:border-b transition-all cursor-pointer animate-thumbnailAppear translate-y-[300px]'
       style={{
         animationDelay: `${id * 0.1}s`,
         animationPlayState: checked ? 'running' : 'paused',
       }}
     >
+      <div id={name} />
       <div
         className="relative group overflow-hidden"
         onMouseEnter={handleHoverStart}
@@ -173,7 +173,7 @@ function List({
                   </div>
                   <p className="mt-4 text-sm lg:text-base">{work.description}</p>
                 </div>
-                <div className="w-full flex flex-col gap-4">
+                <div className="w-full flex flex-col gap-4 font-normal">
                   {work.details.map(detail => {
                     return (
                       <div key={detail.main} className="text-sm lg:text-base">
@@ -206,18 +206,16 @@ function List({
 }
 
 export function CareerList() {
-  const searchParams = useSearchParams();
-
-  const target = searchParams.get('target');
-
   const [checked, setChecked] = useState(false);
-  const [selected, setSelected] = useState(target || '');
+  const [selected, setSelected] = useState('');
   
   const [ref, entry] = useIntersectionObserver({
     threshold: 0,
     root: null,
     rootMargin: "0px",
   });
+
+  const careers = Object.keys(careerDetail);  
   
   useEffect(() => {
     if (checked) {
@@ -227,10 +225,9 @@ export function CareerList() {
     if (entry?.isIntersecting) {
       setChecked(true);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entry?.isIntersecting]);
-
-  const careers = Object.keys(careerDetail);  
 
   return (
     <ul ref={ref}>

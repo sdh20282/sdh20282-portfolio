@@ -65,7 +65,7 @@ function List({
         onMouseLeave={handleHoverEnd}
       >
         <Link
-          href={`/career?target=${name}`}
+          href='/career'
           className={`w-full flex flex-col items-start md:flex-row justify-between md:items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[50px] md:py-[75px] group-hover:text-[#666]`}
         >
           <p className="flex flex-col text-left gap-1 lg:gap-3">
