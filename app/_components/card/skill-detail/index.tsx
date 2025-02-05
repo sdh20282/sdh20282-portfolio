@@ -53,9 +53,6 @@ export function SkillDetailCard({
       x: '-100%',
     }),
     visible: (i: number) => {
-      console.log(delay * 0.9 * (percentage / 100));
-      
-
       return {
         backgroundColor: color,
         x: '0%',
