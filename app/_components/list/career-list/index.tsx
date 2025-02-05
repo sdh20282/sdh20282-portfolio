@@ -2,9 +2,53 @@
 
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
+import { motion } from 'framer-motion';
+
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 import { careerDetail } from "@/data";
+
+const appearContent = {
+  initial: {
+    height: 0,
+  },
+  enter: {
+    height: 'auto',
+    transition: { 
+      duration: 0.6,
+      ease: [0.33, 1, 0.68, 1],
+    },
+  },
+  closed: {
+    height: 0,
+    transition: { 
+      duration: 0.6,
+      ease: [0.33, 1, 0.68, 1],
+      delay: 0.6,
+    },
+  }
+}
+
+const appearDetail = {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: { 
+      duration: 0.6,
+      ease: [0.33, 1, 0.68, 1],
+      delay: 0.6
+    },
+  },
+  closed: {
+    opacity: 0,
+    transition: { 
+      duration: 0.6,
+      ease: [0.33, 1, 0.68, 1],
+    },
+  }
+}
 
 function List({
   name,
@@ -20,6 +64,7 @@ function List({
   setSelected: Dispatch<SetStateAction<string>>,
 }) {
   const detail = careerDetail[name as keyof typeof careerDetail];
+  const active = selected === name;
 
   const handleClickName = () => {
     setSelected(selected === name ? '' : name);
@@ -45,55 +90,61 @@ function List({
           <span>{detail.period.from}</span>
           <span>~</span>
           <span>{detail.period.to}</span>
-          <span>{`, ${detail.position}`}</span>
+          <span className="font-nanumsquare font-semibold">{`, ${detail.position}`}</span>
         </p>
       </button>
-      {
-        selected === name && (
-          <div>
-            {detail.works.map(work => {
-              return (
-                <div key={work.description} className="flex flex-col lg:flex-row text-[#fff] px-[7vw] py-[50px] md:py-[75px] gap-16 lg:gap-20">
-                  <div className="w-full">
-                    <div className="flex flex-wrap items-baseline lg:flex-col justify-between">
-                      <p className="font-semibold text-xl lg:text-2xl">{work.title}</p>
-                      <p className="text-[#aaa] text-sm lg:text-base">
-                        <span>{work.period.from}</span>
-                        <span>~</span>
-                        <span>{work.period.to}</span>
-                      </p>
-                    </div>
-                    <p className="mt-4 text-sm lg:text-base">{work.description}</p>
+      <motion.div
+        className="overflow-hidden"
+        variants={appearContent}
+        animate={active ? 'enter' : 'closed'}
+      >
+        <motion.div
+          className="font-nanumsquare"
+          variants={appearDetail}
+          animate={active ? 'enter' : 'closed'}
+        >
+          {detail.works.map(work => {
+            return (
+              <div key={work.description} className="flex flex-col lg:flex-row text-[#fff] px-[7vw] py-[50px] md:py-[75px] gap-16 lg:gap-20">
+                <div className="w-full">
+                  <div className="flex flex-wrap items-baseline lg:flex-col justify-between">
+                    <p className="font-semibold text-xl lg:text-2xl">{work.title}</p>
+                    <p className="text-[#aaa] text-sm lg:text-base">
+                      <span>{work.period.from}</span>
+                      <span>~</span>
+                      <span>{work.period.to}</span>
+                    </p>
                   </div>
-                  <div className="w-full flex flex-col gap-4">
-                    {work.details.map(detail => {
-                      return (
-                        <div key={detail.main} className="text-sm lg:text-base">
-                          <p>{detail.main}</p>
-                          {detail.subs.length > 0 && (
-                            <div className="ml-2">
-                              {
-                                detail.subs.map(sub => {
-                                  return (
-                                    <div key={sub} className="flex">
-                                      <div className="w-4">•</div>
-                                      <p>{sub}</p>
-                                    </div>
-                                  )
-                                })
-                              }
-                            </div>
-                          )}
-                        </div>
-                      )
-                    })}
-                  </div>
+                  <p className="mt-4 text-sm lg:text-base">{work.description}</p>
                 </div>
-              )
-            })}
-          </div>
-        )
-      }
+                <div className="w-full flex flex-col gap-4">
+                  {work.details.map(detail => {
+                    return (
+                      <div key={detail.main} className="text-sm lg:text-base">
+                        <p>{detail.main}</p>
+                        {detail.subs.length > 0 && (
+                          <div className="ml-2">
+                            {
+                              detail.subs.map(sub => {
+                                return (
+                                  <div key={sub} className="flex">
+                                    <div className="w-4 font-rubik">•</div>
+                                    <p>{sub}</p>
+                                  </div>
+                                )
+                              })
+                            }
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </motion.div>
+      </motion.div>
     </li>
   )
 }
