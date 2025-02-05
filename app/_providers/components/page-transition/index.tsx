@@ -43,17 +43,17 @@ const SVG = ({
 }) => {
   const initialPath = `
     M0 300 
-    Q${width/2} 0 ${width} 300
+    Q${width / 2} 0 ${width} 300
     L${width} ${height + 300}
-    Q${width/2} ${height + 600} 0 ${height + 300}
+    Q${width / 2} ${height + 600} 0 ${height + 300}
     L0 0
   `;
 
   const targetPath = `
     M0 300
-    Q${width/2} 0 ${width} 300
+    Q${width / 2} 0 ${width} 300
     L${width} ${height}
-    Q${width/2} ${height} 0 ${height}
+    Q${width / 2} ${height} 0 ${height}
     L0 0
   `;
 
@@ -70,14 +70,14 @@ export function PageTransition ({
   children: React.ReactNode
 }) {
   const pathname = usePathname();
-
+  
   const [dimensions, setDimensions] = useState<{
     width: number,
     height: number,
   }>({
     width: -1,
     height: -1
-  })
+  });
 
   useEffect( () => {
     function resize(){
