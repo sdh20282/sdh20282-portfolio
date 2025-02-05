@@ -6,6 +6,7 @@ import {
   CareerList,
 } from "@/components";
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 const slideUpContent = {
   initial: {
@@ -27,16 +28,18 @@ export function CareerContent() {
   const target = searchParams.get('target');
 
   return (
-    <motion.div
-      className='flex flex-col w-full py-[150px] px-[8vw] text-white'
-      variants={slideUpContent}
-      initial='initial'
-      animate='enter'
-    >
-      <div className="w-full flex justify-between px-[7vw] uppercase pb-[25px] text-[#777] text-sm font-rubik">
-        <span className='font-medium'>careers</span>
-      </div>
-      <CareerList target={target || ''} />
-    </motion.div>
+    <Suspense>
+      <motion.div
+        className='flex flex-col w-full py-[150px] px-[8vw] text-white'
+        variants={slideUpContent}
+        initial='initial'
+        animate='enter'
+      >
+        <div className="w-full flex justify-between px-[7vw] uppercase pb-[25px] text-[#777] text-sm font-rubik">
+          <span className='font-medium'>careers</span>
+        </div>
+        <CareerList target={target || ''} />
+      </motion.div>
+    </Suspense>
   )
 }
