@@ -7,6 +7,27 @@ import { motion } from 'framer-motion';
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 import { careerDetail } from "@/data";
+import { TitleSlider } from "../../slider";
+
+const appearHover = {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: { 
+      duration: 0.3,
+      ease: [0.33, 1, 0.68, 1],
+    },
+  },
+  closed: {
+    opacity: 0,
+    transition: { 
+      duration: 0.3,
+      ease: [0.33, 1, 0.68, 1],
+    },
+  }
+}
 
 const appearContent = {
   initial: {
@@ -54,21 +75,27 @@ function List({
   name,
   id,
   checked,
-  selected,
-  setSelected,
 }: {
   name: string;
   id: number;
   checked: boolean;
-  selected: string,
-  setSelected: Dispatch<SetStateAction<string>>,
 }) {
+  const [active, setActive] = useState(false);
+  const [hover, setHover] = useState(false);
+
   const detail = careerDetail[name as keyof typeof careerDetail];
-  const active = selected === name;
 
   const handleClickName = () => {
-    setSelected(selected === name ? '' : name);
+    setActive(prev => !prev);
   }
+
+  const handleHoverStart = () => {
+    setHover(true);
+  }
+
+  const handleHoverEnd = () => {
+    setHover(false);
+  }  
 
   return (
     <li 
@@ -78,21 +105,45 @@ function List({
         animationPlayState: checked ? 'running' : 'paused',
       }}
     >
-      <button
-        className='w-full flex flex-col items-start md:flex-row justify-between md:items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[50px] md:py-[75px]'
-        onClick={handleClickName}
+      <div
+        className="relative group overflow-hidden"
+        onMouseEnter={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
       >
-        <p className="flex flex-col text-left gap-1 lg:gap-3">
-          <span className="text-2xl md:text-3xl lg:text-4xl font-semibold">{detail.name}</span>
-          <span className="text-sm lg:text-base">{detail.description}</span>
-        </p>
-        <p className="mt-4 md:mt-0 text-sm lg:text-base">
-          <span>{detail.period.from}</span>
-          <span>~</span>
-          <span>{detail.period.to}</span>
-          <span className="font-nanumsquare font-semibold">{`, ${detail.position}`}</span>
-        </p>
-      </button>
+        <button
+          className={`w-full flex flex-col items-start md:flex-row justify-between md:items-center max-lg:flex-wrap transition-all duration-300 text-[#fff] px-[7vw] py-[50px] md:py-[75px] group-hover:text-[#666] ${active && 'text-[#666]'}`}
+          onClick={handleClickName}
+        >
+          <p className="flex flex-col text-left gap-1 lg:gap-3">
+            <span className="text-2xl md:text-3xl lg:text-4xl font-semibold">{detail.name}</span>
+            <span className="text-sm lg:text-base">{detail.description}</span>
+          </p>
+          <p className="mt-4 md:mt-0 text-sm lg:text-base">
+            <span>{detail.period.from}</span>
+            <span>~</span>
+            <span>{detail.period.to}</span>
+            <span className="font-nanumsquare font-semibold">{`, ${detail.position}`}</span>
+          </p>
+        </button>
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-rubik uppercase text-2xl md:text-3xl lg:text-4xl font-semibold pointer-events-none"
+          variants={appearHover}
+          animate={hover || active ? 'enter' : 'closed'}
+        >
+          <TitleSlider repeat={24} baseVelocity={0.5}>
+            <span 
+              // className={`pe-12 ${selected && 'text-[#aaa]'}`} 
+              className={`pe-12`} 
+              style={{
+                transition: 'all 300'
+              }}
+            >
+              <span>click to show details about {detail.name}</span>
+              <span className='ml-12'>-</span>
+            </span>
+          </TitleSlider>
+        </motion.div>
+      </div>
       <motion.div
         className="overflow-hidden"
         variants={appearContent}
@@ -108,7 +159,7 @@ function List({
               <div key={work.description} className="flex flex-col lg:flex-row text-[#fff] px-[7vw] py-[50px] md:py-[75px] gap-16 lg:gap-20">
                 <div className="w-full">
                   <div className="flex flex-wrap items-baseline lg:flex-col justify-between">
-                    <p className="font-semibold text-xl lg:text-2xl">{work.title}</p>
+                    <div className="font-semibold text-xl lg:text-2xl">{work.title}</div>
                     <p className="text-[#aaa] text-sm lg:text-base">
                       <span>{work.period.from}</span>
                       <span>~</span>
@@ -151,7 +202,6 @@ function List({
 
 export function CareerList() {
   const [checked, setChecked] = useState(false);
-  const [selected, setSelected] = useState("");
   
   const [ref, entry] = useIntersectionObserver({
     threshold: 0,
@@ -170,7 +220,7 @@ export function CareerList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entry?.isIntersecting]);
 
-  const careers = Object.keys(careerDetail);
+  const careers = Object.keys(careerDetail);  
 
   return (
     <ul ref={ref}>
@@ -182,8 +232,6 @@ export function CareerList() {
               name={key}
               id={index}
               checked={checked}
-              selected={selected}
-              setSelected={setSelected}
             />
           )
         })

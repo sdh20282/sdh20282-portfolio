@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useTitleSlider } from "@/hooks";
 import { randomId } from "@/utils";
 
-export function TitleSlider({ children, repeat = 2, baseVelocity }: { children: React.ReactNode, repeat: number, baseVelocity: number }) {
+export function TitleSlider({ children, repeat = 2, baseVelocity }: { children: React.ReactNode, repeat: number, baseVelocity?: number }) {
   const x = useTitleSlider(baseVelocity);
 
   return (
