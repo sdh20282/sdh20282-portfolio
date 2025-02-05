@@ -83,51 +83,63 @@ export function ExperienceCard({
         initial='hidden'
         whileInView='visible'
         className='border-b border-[#777]'
-      />
-      <motion.div
-        custom={index}
-        variants={revealContent}
-        viewport={{ once: true }}
-        initial='hidden'
-        whileInView='visible'
-      >
-        <div className="font-gothica1 text-base leading-6 text-white tracking-wide">
-          <div className="py-16 font-bold text-xl lg:text-2xl xl:text-3xl">
-            {
-              experience.name.split(`\n`).map(line => {
-                return (
-                  <p key={randomId()}>{line}</p>
-                )
-              })
-            }
-            <span className="text-[#999] text-xs mt-2 block w-full">{experience.duration}</span>
-          </div>
-          <div className="">
-            {
-              experience.description.split(`\n`).map(line => {
-                return (
-                  <div key={randomId()}>
-                    <p>{line}</p>
-                  </div>
-                )
-              })
-            }
-          </div>
+      /><div className="font-gothica1 text-base leading-6 text-white tracking-wide">
+        <motion.div 
+          className="py-16 font-bold text-xl lg:text-2xl xl:text-3xl"
+          custom={index}
+          variants={revealContent}
+          viewport={{ once: true }}
+          initial='hidden'
+          whileInView='visible'
+        >
           {
-            experience.activities &&
-            <div className="mt-12 flex flex-col gap-1">
-              <p className="text-[#999] font-rubik uppercase text-xs mb-2">activities</p>
-              {
-                experience.activities.map(item => {
-                  return (
-                    <ListText key={randomId()} text={item} />
-                  )
-                })
-              }
-            </div>
+            experience.name.split(`\n`).map(line => {
+              return (
+                <p key={randomId()}>{line}</p>
+              )
+            })
           }
-        </div>
-      </motion.div>
+          <span className="text-[#999] text-xs mt-2 block w-full">{experience.duration}</span>
+        </motion.div>
+        <motion.div
+          custom={index + 0.3}
+          variants={revealContent}
+          viewport={{ once: true }}
+          initial='hidden'
+          whileInView='visible'
+        >
+          {
+            experience.description.split(`\n`).map(line => {
+              return (
+                <div key={randomId()}>
+                  <p>{line}</p>
+                </div>
+              )
+            })
+          }
+        </motion.div>
+        {
+          experience.activities &&
+          <motion.div
+            className="mt-12 flex flex-col gap-1"
+            custom={index + 0.6}
+            variants={revealContent}
+            viewport={{ once: true }}
+            initial='hidden'
+            whileInView='visible'
+          >
+            <p className="text-[#999] font-rubik uppercase text-xs mb-2">activities</p>
+            {
+              experience.activities.map(item => {
+                return (
+                  <ListText key={randomId()} text={item} />
+                )
+              })
+            }
+          </motion.div>
+        }
+      </div>
+      
     </div>
   )
 }
