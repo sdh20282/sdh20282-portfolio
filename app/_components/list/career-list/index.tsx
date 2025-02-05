@@ -8,6 +8,7 @@ import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 import { careerDetail } from "@/data";
 import { TitleSlider } from "@/components";
+import { useSearchParams } from "next/navigation";
 
 const appearHover = {
   initial: {
@@ -102,7 +103,8 @@ function List({
   }  
 
   return (
-    <li 
+    <li
+      id={name}
       className='border-t border-[#777] last-of-type:border-b transition-all cursor-pointer animate-thumbnailAppear translate-y-[300px]'
       style={{
         animationDelay: `${id * 0.1}s`,
@@ -204,13 +206,13 @@ function List({
   )
 }
 
-export function CareerList({
-  target = ''
-}: {
-  target?: string;
-}) {
+export function CareerList() {
+  const searchParams = useSearchParams();
+
+  const target = searchParams.get('target');
+
   const [checked, setChecked] = useState(false);
-  const [selected, setSelected] = useState(target);
+  const [selected, setSelected] = useState(target || '');
   
   const [ref, entry] = useIntersectionObserver({
     threshold: 0,
