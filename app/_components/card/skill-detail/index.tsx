@@ -11,7 +11,7 @@ export function SkillDetailCard({
   percentage,
   color,
   index,
-  delay = 1,
+  delay = 0.7,
  }: {
   name: string,
   percentage: number,
