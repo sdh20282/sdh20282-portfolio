@@ -62,7 +62,7 @@ export const skillOptions = {
   'CSS': `스크린 리더를 고려하여 IROnly등을 활용하여 CSS 처리하려고 노력합니다.\nCSS 속성들을 이해하고, 이를 활용하여 인터렉티브한 애니메이션을 만드는 것을 좋아합니다.`,
   'JavaScript': `Vanilla JS로 SPA를 구현해본 경험이 있습니다.\nrequestAnimationFrame과 같은, JavaScript의 기본 개념들을 이해하고, 디버깅 및 최적화에 이를 활용하려고 합니다.`,
   'TypeScript': `정적 타입 문법을 활용하여 코드를 작성할 수 있습니다.\nPartial, Omit, 제네릭 등을 적절하게 활용할 수 있습니다.`,
-  'React': `오픈소스 라이브러리의 동작 과정을 분석하고, 현재 프로젝트에 적절하게 변형하여 적용하는 것을 좋아합니다.\n사용자 경험과 성능을 위해 Lazy Loading, 메모이제이션 등의 방안을 적용할 수 있습니다.`,
+  'React': `오픈소스 라이브러리의 동작 과정을 분석하고, 현재 프로젝트에 적절하게 변형하여 적용하는 것을 좋아합니다.\n사용자 경험과 성능을 위해 Lazy Loading, useTranslation 등의 방안을 적용할 수 있습니다.\nuseMemo, useCallback, React.memo의 동작 과정을 이해하고, 활용하여 렌더링 최적화를 시도하고 있습니다.\n`,
   'Next.js': `server component, caching 등을 활용하여 화면을 접하는 속도를 높이고, 사용자 경험을 향상시키고자 노력합니다.\nnext-auth, next-session과 같이 next에서 기본적으로 제공하는 기능들을 활용할 수 있습니다.`,
   'Git': `Github, Gitlab등을 사용하여 프로젝트 관리 및 협업해본 경험이 있습니다.\nGit Flow 전략을 활용하여 현업을 수행할 수 있습니다.\nrebase를 활용하여 코드를 관리할 수 있습니다.`,
 };
