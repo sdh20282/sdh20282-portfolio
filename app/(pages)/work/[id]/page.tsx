@@ -17,8 +17,7 @@ export default function WorkDetail({
 }: {
   params: { id: string }
 }) {
-  // @ts-ignore
-  const project = projectDetail[params.id];
+  const project = projectDetail[params.id as keyof typeof projectDetail];
 
   return (
     <FramerWrapper

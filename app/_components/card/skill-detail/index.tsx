@@ -131,8 +131,7 @@ export function SkillDetailCard({
       </div>
       <div className="text-sm hidden md:flex flex-col gap-2">
         {
-          // @ts-ignore
-          skillOptions[name].split('\n').map((line, i) => {
+          skillOptions[name as keyof typeof skillOptions].split('\n').map((line, i) => {
             return (
               <motion.div
                 key={randomId()}
