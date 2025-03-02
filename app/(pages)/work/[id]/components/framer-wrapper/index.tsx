@@ -33,7 +33,7 @@ export function FramerWrapper({
   skills: string[],
   links: { live?: string, github: string },
   images: { name: string, src: string }[],
-  hilight: { type: string, src: string },
+  hilight?: { type: string, src: string },
   role: { category: string, detail: string[] }[],
   learns: { main: string, sub: string[] }[],
 }) {
@@ -50,10 +50,10 @@ export function FramerWrapper({
       <main>
         <DetailLive live={links.live} scrollYProgress={scrollYProgress} />
         <DetailLink link={links.github} />
-        <DetailScreens images={images} />
+        {images.length > 0 ? <DetailScreens images={images} /> : null}
         {hilight && <DetailHilight hilight={hilight} />}
-        <DetailRole role={role} />
-        <DetailLearns learns={learns} />
+        <DetailRole role={role} isAlone={members === '개인 프로젝트'} />
+        {learns?.length > 0 ? <DetailLearns learns={learns} /> : null}
       </main>
     </div>
   )

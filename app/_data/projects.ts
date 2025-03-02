@@ -1,6 +1,157 @@
-import { VanillaJSSPA, JettyPreview, NashdaPreview, TalkidsPreview } from '@/assets';
+import { TsxCraftPreview, PortFolioPreview, VanillaJSSPAPreview, JettyPreview, NashdaPreview, TalkidsPreview } from '@/assets';
 
 export const projectDetail = {
+  'tsx-craft': {
+    title: "TSX Craft",
+    introduce: "TypeScript, Babel, Webpack으로 React를 개발하는 프로젝트",
+    members: "FE 2명",
+    period: {
+      from: '2025.02.20',
+      to: '진행중',
+    },
+    skills: ['TypeScript', 'Babel', 'Webpack'],
+    images: [
+      {
+        name: 'App.tsx 사용 예시',
+        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/tsx-craft/app.png'
+      },
+    ],
+    hilight: {
+      type: 'image',
+      src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/tsx-craft.gif',
+    },
+    links: {
+      github: 'https://github.com/TSXCraft/ts-react',
+    },
+    role: [
+      {
+        category: 'Babel, Webpack 세팅',
+        detail: [
+          'React와 같은 폴더 구조를 활용할 수 있게 구현',
+          '개발 서버 빌드 타임 100ms 내외로 구성',
+        ]
+      },
+      {
+        category: 'JSX 파싱 구현',
+        detail: [
+          'JSX로 작성된 함수형 컴포넌트를 파싱 및 바벨에 연동',
+          'createElement 함수를 통해 바벨에서 변경된 결과 처리',
+        ]
+      },
+      {
+        category: 'Renderer 클래스 구현',
+        detail: [
+          'createElement로 생성된 데이터를 렌더링하는 클래스 구현',
+          'React 15 버전의 동기식 재조정 과정과 유사한 재조정 알고리즘 구현(추후 concurrent mode로 수정 예정)',
+        ]
+      },
+      {
+        category: 'Router 구현',
+        detail: [
+          'react에서의 동작 방식와 마찬가지로 화면을 새로고침 하지 않고 파이버 노드 업데이트를 통한 화면 갱신 로직 구현',
+        ]
+      }
+    ],
+    learns: [],
+  },
+  'just-swim': {
+    title: "Just Swim",
+    introduce: "수영 회원 VIP 관리 서비스",
+    members: "BE 1명, FE 3명, 기획 및 디자인 1명",
+    period: {
+      from: '2024.06',
+      to: '2024.09',
+    },
+    skills: ['Next.js', 'Tailwind CSS'],
+    images: [],
+    links: {
+      github: 'https://github.com/Just-Swim-service/Just-Swim-FE',
+    },
+    role: [
+      {
+        category: '수영 강사 스케줄 관리',
+        detail: [
+          'unstable_cache를 활용하여 fetch 캐싱 및 fetch 된 데이터를 활용한 함수를 캐싱하여 최적화 수행',
+          'useTransition 훅 및 suspense를 활용하여 작업의 우선순위를 조정하여 UX 향상',
+          '수업 QR 코드 저장 및 복사 기능 구현'
+        ]
+      },
+      {
+        category: '사용자 input 공통 컴포넌트 구현',
+        detail: [
+          'React Hook Form과 server action 연동',
+          'dispatchEvent 활용하여 React Hook Form에 변경 사항 강제 연동',
+        ]
+      },
+      {
+        category: 'date, time 모달 및 picker 구현',
+        detail: [
+          '일반적인 time/date picker 및 무한 순환하는 time/date picker 구현',
+          '마우스 드래그 및 모바일 터치 기능 구현',
+        ]
+      }
+    ],
+    learns: [],
+  },
+  'portfolio': {
+    title: "sdh20282's Portfolio",
+    introduce: "Next.js와 framer-motion으로 만든 포트폴리오",
+    members: "개인 프로젝트",
+    period: {
+      from: '2024.05',
+      to: '진행중',
+    },
+    skills: ['Next.js', 'framer-motion'],
+    images: [
+      {
+        name: 'Home 페이지',
+        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/home.gif'
+      },
+      {
+        name: 'about 페이지',
+        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/about.gif'
+      },
+      {
+        name: 'career 페이지',
+        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/career.gif'
+      },
+      {
+        name: 'work 페이지',
+        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/work.gif'
+      },
+    ],
+    hilight: {
+      type: 'image',
+      src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/portfolio.gif',
+    },
+    links: {
+      github: 'https://github.com/sdh20282/sdh20282-portfolio',
+    },
+    role: [
+      {
+        category: 'custom hook을 활용한 중복 로직 최소화',
+        detail: [
+          'cursor follow 효과, magnetic 효과 등을 custom hook로 처리하여 중복 로직 최소화',
+        ]
+      },
+      {
+        category: 'gsap, framer-motion 라이브러리를 사용한 사용자 인터렉션 구현',
+        detail: [
+          'parallax scroll, magnetic 등의 사용자 인터렉션 구현',
+          '벡터 이미지와 AnimatePresence 컴포넌트를 활용하여 페이지 전환 애니메이션 구현'
+        ]
+      }
+    ],
+    learns: [
+      {
+        main: 'Next.js의 렌더링 과정에 대해 이해할 수 있었습니다.',
+        sub: [
+          'framer-motion을 활용하여 페이지 전환 애니메이션을 처리하는 과정에서 app router에서 페이지 전환 애니메이션이 동작하지 않는 문제를 마주했습니다.',
+          'LayoutRouterContext를 통해 router 갱신을 강제로 막는 frozen router를 통해 문제를 해결하는 과정에서 page router와 app router의 렌더링 과정 차이를 이해할 수 있었습니다.',
+        ]
+      },
+    ]
+  },
   'vanilla-js-spa': {
     title: "Vanilla JS SPA",
     introduce: "Vanilla JavaScript를 기반으로 한 SPA",
@@ -32,7 +183,7 @@ export const projectDetail = {
         category: 'Routing',
         detail: [
           'Express를 활용한 미들웨어를 구현하여 새로고침 및 직접 url을 입력하는 경우 처리',
-          'history API를 활용하여 url 변경에 대한 처리 구현',
+          'history API를 활용하여 화면 깜빡임 없이 url 변경에 대한 라우팅 구현',
           '이벤트 위임을 통해 anchor 요소에 이벤트 핸들러를 등록하지 않아도 페이지가 변경되게 구현'
         ]
       },
@@ -43,7 +194,7 @@ export const projectDetail = {
         ]
       },
       {
-        category: 'Rendering',
+        category: 'Rendering & Life Cycle',
         detail: [
           'custom element를 활용하여 컴포넌트 클래스 구현 및 props 처리',
           'requestAnimationFrame을 활용하여 렌더링 최적화 구현',
@@ -55,8 +206,15 @@ export const projectDetail = {
       {
         main: 'JavaScript 관련 지식을 재정립할 수 있었습니다.',
         sub: [
-          'Vanilla JS 기반의 spa를 구현하며 기존에 확실히 모르던 부분들에 대해 짚고 넘아갈 수 있었습니다.',
+          'Vanilla JS 기반의 SPA를 구현하며 기존에 확실히 모르던 부분들에 대해 짚고 넘아갈 수 있었습니다.',
           'Proxy와 Object.defineProperty의 차이나 custom element와 같이 JavaScript에 관련된, 보다 근본적인 부분들에 대해 이해할 수 있었습니다.',
+        ]
+      },
+      {
+        main: 'SPA의 동작 과정을 이해하고, 이를 활용할 수 있게 되었습니다.',
+        sub: [
+          'SPA에서의 라우팅을 처리하는 기본적인 원리와 렌더링을 적용하는 방식, 컴포넌트의 라이프 사이클을 체험할 수 있었습니다.',
+          '리액트에서 이를 어떻게 적용하면 좋을 지 고민해보는 시간을 가질 수 있게 되었습니다.',
         ]
       }
     ]
@@ -96,21 +254,22 @@ export const projectDetail = {
       {
         category: 'Library',
         detail: [
+          'x/y grid line, left/right/top/bottom label, left/right/top/bottom legend, legend 공통 컴포넌트 제작',
           'bar-chart, stacked-bar-chart 차트 제작',
-          'x/y grid line, left/right/top/bottom label, left/right/top/bottom legend, legend 공통 컴포넌트 제작'
+          '수식을 직접 계산하고 최적화하여 계산에 소모되는 시간을 줄이고 transform 속성을 통해 gpu를 활용 및 composite 단계만 수행되도록 하여 성능 최적화 수행'
         ]
       },
       {
         category: 'Micro Page',
         detail: [
           '커스텀 차트 선택 페이지 디자인 및 개발',
-          '차트 커스텀 및 샘플 확인 페이지 디자인 및 개발'
+          '차트 커스텀 및 샘플 확인 페이지 디자인 및 개발 및 모듈화를 적용하여 생산성 향상'
         ]
       },
       {
         category: 'Deploy',
         detail: [
-          '라이브러리 배포'
+          'babel을 통해 라이브러리 배포'
         ]
       }
     ],
@@ -119,7 +278,7 @@ export const projectDetail = {
         main: '모듈화를 통해 개발 시간을 크게 단축했습니다.',
         sub: [
           '차트 하나에 존재하는, 커스텀 가능한 속성들에 대한 이름, 타입, 종속성 등을 정의한 object를 통해 페이지가 생성되게 했습니다.',
-          '커스텀 페이지 하나의 구현을 위해 필요한 시간을 1시간 내외로 크게 단축했고, 4일이라는 짧은 시간 안에 데모 사이트 개발을 완료할 수 있었습니다.',
+          '커스텀 페이지 하나의 구현을 위해 필요한 시간을 1시간 내외로 크게 단축했고, 4일이라는 짧은 시간 안에 전체 차트에 대한 샘플이 포함된 데모 사이트 개발을 완료할 수 있었습니다.',
           '코드의 재사용성과 구조적인 설계에 대해 고민하는 습관을 가지게 되었습니다.',
         ]
       },
@@ -129,14 +288,15 @@ export const projectDetail = {
           '프로토타입 개발론을 적용, 주기적으로 프로토타입을 만들고 피드백을 받아 수정하는 과정을 반복했습니다.',
           '다양한 피드백을 접하고, 수용할 수 있는 자세를 가지게 되었습니다',
           '최종적으로 10개 팀 피드백 중 8개 팀에서 ‘직관적이다’, ‘사용하기 편하다’ 등의 긍정적인 평가를 받을 수 있었습니다.',
+          '지금도 꾸준히 사용자가 발생하고 있습니다.'
         ]
       },
       {
         main: '코드 리뷰하는 습관을 가지게 되었습니다.',
         sub: [
+          '코드가 합쳐진 이후 발생한 문제로 인해 디버깅에 많은 시간이 소모했습니다.',
           '실제 동작 시 발생할 수 있는 문제를 코드 리뷰를 통해 예방하며 디버깅에 소모되는 대폭 시간을 단축했습니다.',
-          '다른 사람들의 코드를 읽어 보며 문제점들을 파악하고, 함께 개선점을 찾아나갈 수 있었습니다.',
-          '코드를 작성할 때 어떤 문제가 발생할지, 더 좋은 방법은 없는지 고민하며 코드를 작성하는 계기가 되었습니다.',
+          '코드를 작성할 때 어떤 문제가 발생할지, 더 좋은 방법은 없는지 고민하며 코드를 작성하는 계기가 되었으며 코드 리뷰가 가지는 긍정적 효과를 느꼈습니다.',
         ]
       }
     ]
@@ -180,27 +340,21 @@ export const projectDetail = {
         category: 'Frontend',
         detail: [
           '메인 페이지, 발음 연습 페이지, 대화 시뮬레이션 페이지, 스피드 퀴즈 페이지, 드라마 플레이 페이지, 주간 테스트 페이지 개발',
-          'Redux persist storage 구현 및 session storage 연동',
-          '음성 처리 관련 부분 구현'
+          'Redux persist storage 구현 및 session storage 연동하여 전역 저장소 구현',
+          'web speech api를 활용하여 음성 처리 관련 부분 구현'
         ]
       },
       {
         category: 'Backend',
         detail: [
-          'STT 서버 구현'
-        ]
-      },
-      {
-        category: 'Database',
-        detail: [
-          '테이블 구조 설계'
+          'Pytorch와 Fast API로 STT 서버 구현'
         ]
       },
       {
         category: 'AI',
         detail: [
-          '모델 비교 및 선정',
-          '데이터 전처리 및 fine tuning 진행'
+          '음성 인식 모델 비교 및 선정',
+          'Ai Hub의 데이터를 활용하여 데이터 전처리 및 whisper 모델 fine tuning 진행'
         ]
       }
     ],
@@ -208,16 +362,16 @@ export const projectDetail = {
       {
         main: 'UI/UX에 대한 이해를 높일 수 있었습니다.',
         sub: [
-          '실어증 환자들 중에는 인지 능력의 저하를 수반하는 경우가 있다는 것을 배웠습니다.',
-          '인지 능력이 부족한 사용자들은 다채로운 색상과 화려한 디자인, 분산되어 있는 구조에 혼란을 느낄 수 있다는 점을 배웠습니다.',
-          '이러한 사용자를 위한 UI/UX에 대해 고민하는 계기가 되었습니다다.',
+          '기획을 위해 논문 등을 조사하며 실어증 환자들 중에는 인지 능력의 저하를 수반하는 경우가 있다는 것을 배웠습니다.',
+          '또한 인지 능력이 부족한 사용자들은 다채로운 색상과 화려한 디자인, 분산되어 있는 구조에 혼란을 느낄 수 있다는 점을 배웠습니다.',
+          '이러한 불리한 위치에 있는 사용자들을 위한 UI/UX에 대해 고민하는 계기가 되었습니다다.',
         ]
       },
       {
         main: '생각을 정리하고, 공유하는 습관을 가지게 되었습니다.',
         sub: [
-          '기능에 대해 서로 이해하는 바가 달라 문제가 발생했고, 기획 단계부터 다시 수정한한 경험이 있습니다.',
-          '서로 생각하는 유저 시나리오에 대해 정리하고, 이를 공유하고 토론하며 문제를 해결할 수 있었습니다.',
+          '기능에 대해 서로 이해하는 바가 달라 문제가 발생했고, 개발 단계를 일시중지하고 기획 단계부터 다시 수정한 경험이 있습니다.',
+          '서로 생각하는 유저 시나리오에 대해 정리하고, 이를 문서화하여 같은 문제를 겪지 않을 수 있었습니다.',
         ]
       },
       {
@@ -226,7 +380,7 @@ export const projectDetail = {
           '한국어 발음 인식을 위해 직접 fine tuning을 진행해야 했습니다.',
           '다양한 모델의 성능을 비교하고, 적절한 모델을 선택 후, ai hub의 한국어 음성 데이터를 한국어 발음으로 변경하여 fine tuning에 활용했습니다.',
           '결과적으로 한국어 발음에 대해 wer 0.3의 결과를 얻을 수 있었습니다.',
-          '모르는 부분이라도 일단 시도하고, 단계적으로 접근한다면 어떻게든 해낼 수 있다는 자신감을 얻었습니다.',
+          '모르는 부분이라도 일단 시도하며, 단계적으로 접근해 나간다면 어떻게든 해낼 수 있다는 자신감을 얻었습니다.',
         ]
       },
     ]
@@ -266,21 +420,21 @@ export const projectDetail = {
         category: 'Frontend',
         detail: [
           '헤더 레이아웃, 모달 공통 컴포넌트 개발',
-          '1대1 채팅/화상 페이지, 그룹 채팅/화상 페이지 개발',
-          '음성 인식 관련 처리 구현'
+          'web socket을 활용하여 1대1 채팅/화상 페이지 및 그룹 채팅/화상 페이지 개발',
+          'web speech api를 통해 음성 인식 관련 처리 구현'
         ]
       },
       {
         category: 'Backend',
         detail: [
-          '채팅, webRTC 서버 구현',
-          'STT, 번역 서버 구현'
+          'web socket을 활용하여 채팅 및 webRTC 서버 구현',
+          'Express로 STT, 번역을 처리하는 서버 구현'
         ]
       },
       {
         category: 'Database',
         detail: [
-          '테이블 구조 설계'
+          '채팅, 사용자 테이블 구조 설계'
         ]
       },
     ],
@@ -290,13 +444,13 @@ export const projectDetail = {
         sub: [
           '프로젝트 기획 상 webRTC 기술을 적용할 필요가 있었고 초기에 open vidu 오픈소스를 활용하자는 의견이 있었습니다.',
           '사용자 간의 연결이 1:1 혹은 1:N(소수)에서 주로 발생할 것이라 판단했고, 논의 끝에 보다 쾌적한 경험을 제공하기 위해 서버를 직접 구현하기로 했습니다.',
-          'mesh 서버를 구현했고 0.3초의 지연 시간이 발생한 SFU 방식의 open vidu에 비해 지연 시간을 0.1초로 단축했습니다.'
+          'mesh 서버를 구현했고 0.3초의 지연 시간이 발생한 SFU 방식의 open vidu에 비해 지연 시간을 0.1초 내외로 단축할 수 있었습니다.'
         ]
       },
       {
         main: '토론을 통한 성장을 경험했습니다.',
         sub: [
-          '효율적인 구조를 설계하기 위해 팀원들과 토론하며 고민하는 과정에서 성장을 경험했고, 즐거움을 느꼈습니다.',
+          '효율적인 구조를 설계하기 위해 팀원들과 토론하며 고민하는 과정과 조금씩 개선되는 코드를 보며며 성장을 경험했고, 즐거움을 느꼈습니다.',
         ]
       },
       {
@@ -312,6 +466,12 @@ export const projectDetail = {
 
 export const recentWorkOptions = [
   {
+    title: 'TSX Craft',
+    link: 'tsx-craft',
+    image: TsxCraftPreview,
+    year: '2025',
+  },
+  {
     title: 'Jetty Chart',
     link: 'jetty-chart',
     image: JettyPreview,
@@ -323,19 +483,31 @@ export const recentWorkOptions = [
     image: NashdaPreview,
     year: '2023',
   },
-  {
-    title: 'Talkids',
-    link: 'talkids',
-    image: TalkidsPreview,
-    year: '2023',
-  }
 ];
 
 export const moreWorkOptions = [
   {
+    title: 'TSX Craft',
+    link: 'tsx-craft',
+    image: TsxCraftPreview,
+    year: '2025',
+  },
+  {
+    title: 'Just Swim',
+    link: 'just-swim',
+    image: PortFolioPreview,
+    year: '2024',
+  },
+  {
+    title: 'sdh20282\'s portfolio',
+    link: 'portfolio',
+    image: PortFolioPreview,
+    year: '2024',
+  },
+  {
     title: 'Vanilla JS SPA',
     link: 'vanilla-js-spa',
-    image: VanillaJSSPA,
+    image: VanillaJSSPAPreview,
     year: '2024',
   },
   {

@@ -4,16 +4,18 @@ import { CharTyping, RoleDetail } from "@/components";
 import { randomId } from "@/utils";
 
 export function DetailRole({
-  role
+  role,
+  isAlone
 }: {
-  role: { category: string, detail: string[] }[]
+  role: { category: string, detail: string[] }[];
+  isAlone: boolean;
 }) {
   return (
-    <div className="px-[10vw] pt-[200px]">
+    <div className="px-[10vw] py-[200px]">
       <div className="font-nanumsquare text-white font-bold text-3xl">
-        <CharTyping paragraph='담당 역할' />
+        <CharTyping paragraph={isAlone ? '구현 내용' : '담당 역할'} />
       </div>
-      <div className="pt-[100px] flex gap-[75px] lg:gap-[40px] flex-col lg:flex-row">
+      <div className="pt-[100px] gap-[75px] lg:gap-[40px] grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))]">
         {
           role.map((r, index) => {
             return (

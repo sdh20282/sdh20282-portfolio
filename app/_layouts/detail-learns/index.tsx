@@ -9,11 +9,11 @@ export function DetailLearns({
   learns: { main: string, sub: string[] }[],
 }) {
   return (
-    <div className="px-[10vw] py-[200px]">
+    <div className="px-[10vw] pb-[200px]">
       <div className="font-nanumsquare text-white font-bold text-3xl">
         <CharTyping paragraph='성과 및 배운 점' />
       </div>
-      <div className="pt-[100px] flex gap-[75px] lg:gap-[50px] flex-col lg:flex-row">
+      <div className="pt-[100px] gap-[75px] lg:gap-[50px] grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))]">
         {
           learns.map((learn, index) => {
             return (
