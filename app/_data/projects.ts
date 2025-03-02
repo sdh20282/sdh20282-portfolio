@@ -1,6 +1,85 @@
-import { JettyPreview, NashdaPreview, TalkidsPreview } from '@/assets';
+import { VanillaJSSPA, JettyPreview, NashdaPreview, TalkidsPreview } from '@/assets';
 
 export const projectDetail = {
+  'vanilla-js-spa': {
+    title: "Vanilla JS SPA",
+    introduce: "Vanilla JavaScript를 기반으로 한 SPA",
+    members: "개인 프로젝트",
+    period: {
+      from: '2024.01.07',
+      to: '2024.02.01',
+    },
+    skills: ['JavaScript', 'Express'],
+    images: [
+      {
+        name: '부포 컴포넌트',
+        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/vanilla-js-spa/parent.png'
+      },
+      {
+        name: '자식 컴포넌트',
+        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/vanilla-js-spa/child.png'
+      },
+    ],
+    hilight: {
+      type: 'image',
+      src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/vanilla-js-spa.gif',
+    },
+    links: {
+      github: 'https://github.com/sdh20282/jetty-chart',
+    },
+    role: [
+      {
+        category: 'Routing',
+        detail: [
+          'Express를 활용한 미들웨어를 통해 새로고침 및 직접 url을 입력하는 경우 처리',
+          'history API를 활용하여 뒤로가기 등에 대한 처리 구현',
+          '이벤트 위임을 통해 효율적으로 라우팅 처리'
+        ]
+      },
+      {
+        category: 'State Management',
+        detail: [
+          'proxy를 활용하여 vue-like한 상태 관리 구현'
+        ]
+      },
+      {
+        category: 'Rendering',
+        detail: [
+          'custom element를 활용하여 컴포넌트 클래스 구현 및 props 처리',
+          'requestAnimationFrame을 활용하여 렌더링 최적화 구현',
+          '이벤트 위임을 통한 이벤트 핸들러 구현',
+          'beforeMount, mounted, beforeUpdate, updated 라이프사이클 메서드 구현'
+        ]
+      }
+    ],
+    learns: [
+      {
+        main: '모듈화를 통해 개발 시간을 크게 단축했습니다.',
+        sub: [
+          '차트 하나에 존재하는, 커스텀 가능한 속성들에 대한 이름, 타입, 종속성 등을 정의한 object를 통해 페이지가 생성되게 했습니다.',
+          '커스텀 페이지 하나의 구현을 위해 필요한 시간을 1시간 내외로 크게 단축했고, 4일이라는 짧은 시간 안에 데모 사이트 개발을 완료할 수 있었습니다.',
+          '코드의 재사용성과 구조적인 설계에 대해 고민하는 습관을 가지게 되었습니다.',
+        ]
+      },
+      {
+        main: '위클리 다운로드 1400회를 기록했습니다.',
+        sub: [
+          '프로토타입 개발론을 적용, 주기적으로 프로토타입을 만들고 피드백을 받아 수정하는 과정을 반복했습니다.',
+          '다양한 피드백을 접하고, 수용할 수 있는 자세를 가지게 되었습니다',
+          '최종적으로 10개 팀 피드백 중 8개 팀에서 ‘직관적이다’, ‘사용하기 편하다’ 등의 긍정적인 평가를 받을 수 있었습니다.',
+        ]
+      },
+      {
+        main: '코드 리뷰하는 습관을 가지게 되었습니다.',
+        sub: [
+          '실제 동작 시 발생할 수 있는 문제를 코드 리뷰를 통해 예방하며 디버깅에 소모되는 대폭 시간을 단축했습니다.',
+          '다른 사람들의 코드를 읽어 보며 문제점들을 파악하고, 함께 개선점을 찾아나갈 수 있었습니다.',
+          '코드를 작성할 때 어떤 문제가 발생할지, 더 좋은 방법은 없는지 고민하며 코드를 작성하는 계기가 되었습니다.',
+        ]
+      }
+    ]
+
+  },
   'jetty-chart': {
     title: "Jetty Chart",
     introduce: "자유롭게 커스텀 가능한 React/Next.js 차트 라이브러리",
@@ -272,6 +351,12 @@ export const recentWorkOptions = [
 ];
 
 export const moreWorkOptions = [
+  {
+    title: 'Vanilla JS SPA',
+    link: 'vanilla-js-spa',
+    image: VanillaJSSPA,
+    year: '2024',
+  },
   {
     title: 'Jetty Chart',
     link: 'jetty-chart',

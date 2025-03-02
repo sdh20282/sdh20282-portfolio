@@ -51,7 +51,7 @@ export function FramerWrapper({
         <DetailLive live={links.live} scrollYProgress={scrollYProgress} />
         <DetailLink link={links.github} />
         <DetailScreens images={images} />
-        <DetailHilight hilight={hilight} />
+        {hilight && <DetailHilight hilight={hilight} />}
         <DetailRole role={role} />
         <DetailLearns learns={learns} />
       </main>
