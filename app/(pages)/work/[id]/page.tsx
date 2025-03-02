@@ -28,6 +28,7 @@ export default function WorkDetail({
       skills={project.skills}
       links={project.links}
       images={project.images}
+      // @ts-ignore
       hilight={project.hilight}
       role={project.role}
       learns={project.learns}

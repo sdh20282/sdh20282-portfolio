@@ -31,17 +31,15 @@ export const careerDetail = {
             ],
           },
           {
-            main: 'i18n 활용, 다국어 처리',
-            subs: [
-              '홍콩, 베트남 지점 대응'
-            ],
-          },
-          {
-            main: '이미지 multi-part 업로드 처리',
+            main: 'i18n 라이브러리를 사용하여 다국어 처리, 홍콩, 베트남 현지 지점의 사용자 접근성 및 사용성 개선',
             subs: [],
           },
           {
-            main: '네트워크 통신 용량 21MB → 약 3KB로 축소',
+            main: '이미지 업로드를 multi part로 처리하여 AWS API Gateway의 10MB 제한을 극복',
+            subs: [],
+          },
+          {
+            main: '데이터 가상화를 통해 네트워크 통신 용량 21MB → 약 3KB로 축소',
             subs: [],
           },
           {
@@ -52,18 +50,23 @@ export const careerDetail = {
             main: 'BrowserRouter로 작성된 라우터를 createBrowserRouter를 활용하도록 마이그레이션',
             subs: [
               'nextjs의 app router와 같은 형식으로 라우팅 방식 구현',
+              '데이터 변경을 감지하도록 하여 UX 개선'
             ],
+          },
+          {
+            main: '중첩 객체 변경을 위한 커스텀 훅을 통해 상태 변경을 위한 코드 기존 대비 80% 축소',
+            subs: [],
+          },
+          {
+            main: 'open api를 통해 API 응답 데이터 타입을 직접 선언하지 않고, 백엔드에서 정의한 타입을 활용하여 개발 생산성 향상',
+            subs: [],
           },
           {
             main: 'dnd 활용, 홈페이지 데이터 노출 순서 조절 기능 구현',
             subs: [],
           },
           {
-            main: '태스크 분배 및 일정 관리',
-            subs: [],
-          },
-          {
-            main: '배포 관리',
+            main: '태스크 분배 및 일정 관리, 배포 관리리',
             subs: [],
           },
         ],
@@ -90,10 +93,8 @@ export const careerDetail = {
             ],
           },
           {
-            main: 'i18n 활용, 다국어 처리',
-            subs: [
-              '홍콩, 베트남 지점 대응'
-            ],
+            main: 'i18n 라이브러리를 사용하여 다국어 처리, 홍콩, 베트남 현지 지점의 사용자 접근성 및 사용성 개선',
+            subs: [],
           },
           {
             main: '전체 컴포넌트에 rem 적용, 사용자가 화면 비율을 조절 가능하도록 함',
@@ -110,11 +111,11 @@ export const careerDetail = {
             ],
           },
           {
-            main: '태스크 분배 및 일정 관리',
+            main: 'open api를 통해 API 응답 데이터 타입을 직접 선언하지 않고, 백엔드에서 정의한 타입을 활용하여 개발 생산성 향상',
             subs: [],
           },
           {
-            main: '배포 관리',
+            main: '태스크 분배 및 일정 관리, 배포 관리',
             subs: [],
           },
         ],
@@ -141,7 +142,11 @@ export const careerDetail = {
             ],
           },
           {
-            main: 'dynamic parameter와 커스텀 훅을 활용하여, 6개 다국어 언어 대응',
+            main: '웹뷰 기반의 반응형 화면 설계 및 구현을 통해 모바일 환경에서의 사용자 경험 최적화',
+            subs: [],
+          },
+          {
+            main: 'dynamic parameter와 커스텀 훅을 활용하여 dictionary 구현, 6개 다국어 언어 대응',
             subs: [],
           },
           {
@@ -149,11 +154,7 @@ export const careerDetail = {
             subs: [],
           },
           {
-            main: '태스크 분배 및 일정 관리',
-            subs: [],
-          },
-          {
-            main: '배포 관리',
+            main: '태스크 분배 및 일정 관리, 배포 관리리',
             subs: [],
           },
         ],
