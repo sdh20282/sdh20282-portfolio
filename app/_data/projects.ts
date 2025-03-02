@@ -31,15 +31,15 @@ export const projectDetail = {
       {
         category: 'Routing',
         detail: [
-          'Express를 활용한 미들웨어를 통해 새로고침 및 직접 url을 입력하는 경우 처리',
-          'history API를 활용하여 뒤로가기 등에 대한 처리 구현',
-          '이벤트 위임을 통해 효율적으로 라우팅 처리'
+          'Express를 활용한 미들웨어를 구현하여 새로고침 및 직접 url을 입력하는 경우 처리',
+          'history API를 활용하여 url 변경에 대한 처리 구현',
+          '이벤트 위임을 통해 anchor 요소에 이벤트 핸들러를 등록하지 않아도 페이지가 변경되게 구현'
         ]
       },
       {
         category: 'State Management',
         detail: [
-          'proxy를 활용하여 vue-like한 상태 관리 구현'
+          'proxy를 활용하여 불변성을 유지하지 않는 vue-like한 상태 관리 구현'
         ]
       },
       {
@@ -47,21 +47,19 @@ export const projectDetail = {
         detail: [
           'custom element를 활용하여 컴포넌트 클래스 구현 및 props 처리',
           'requestAnimationFrame을 활용하여 렌더링 최적화 구현',
-          '이벤트 위임을 통한 이벤트 핸들러 구현',
           'beforeMount, mounted, beforeUpdate, updated 라이프사이클 메서드 구현'
         ]
       }
     ],
     learns: [
       {
-        main: 'JavaScript에 대한 보다 깊은 이해',
+        main: 'JavaScript 관련 지식을 재정립할 수 있었습니다.',
         sub: [
-          'JavaScript 관련 지식을 활용하여 spa를 Vanilla JS로 구현해보며 기존 지식을 다시 짚고 넘아갈 수 있었습니다.',
+          'Vanilla JS 기반의 spa를 구현하며 기존에 확실히 모르던 부분들에 대해 짚고 넘아갈 수 있었습니다.',
           'Proxy와 Object.defineProperty의 차이나 custom element와 같이 JavaScript에 관련된, 보다 근본적인 부분들에 대해 이해할 수 있었습니다.',
         ]
-      },
+      }
     ]
-
   },
   'jetty-chart': {
     title: "Jetty Chart",
@@ -126,7 +124,7 @@ export const projectDetail = {
         ]
       },
       {
-        main: '위클리 다운로드 1400회를 기록했습니다.',
+        main: '위클리 다운로드 1300회를 기록했습니다.',
         sub: [
           '프로토타입 개발론을 적용, 주기적으로 프로토타입을 만들고 피드백을 받아 수정하는 과정을 반복했습니다.',
           '다양한 피드백을 접하고, 수용할 수 있는 자세를 가지게 되었습니다',
