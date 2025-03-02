@@ -38,7 +38,7 @@ function _CursorFollowModal({
         {
           options.map(({ title, image }) => {
             return (
-              <div key={randomId()} className='relative w-full aspect-video overflow-hidden'>
+              <div key={randomId()} className='relative w-full h-full aspect-video overflow-hidden'>
                 <Image
                   src={image}
                   alt={`${title} thumbnail image`}
