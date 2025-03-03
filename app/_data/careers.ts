@@ -66,7 +66,7 @@ export const careerDetail = {
             subs: [],
           },
           {
-            main: '태스크 분배 및 일정 관리, 배포 관리리',
+            main: '태스크 분배 및 일정 관리, 배포 관리',
             subs: [],
           },
         ],
@@ -154,7 +154,7 @@ export const careerDetail = {
             subs: [],
           },
           {
-            main: '태스크 분배 및 일정 관리, 배포 관리리',
+            main: '태스크 분배 및 일정 관리, 배포 관리',
             subs: [],
           },
         ],
