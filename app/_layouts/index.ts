@@ -23,6 +23,7 @@ export * from './work-content';
 
 // work detail
 export * from './detail-header';
+export * from './detail-background';
 export * from './detail-live';
 export * from './detail-link';
 export * from './detail-screens';

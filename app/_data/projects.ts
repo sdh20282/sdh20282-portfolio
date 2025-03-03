@@ -10,6 +10,11 @@ export const projectDetail = {
       to: '진행중',
     },
     skills: ['TypeScript', 'Babel', 'Webpack'],
+    background: [
+      '\'모던 리액트 Deep Dive\'란 책을 읽으며 React의 동작 원리를 이해하고, 기본기를 다질 수 있었습니다.',
+      '이를 바탕으로 이전 직장인 MEMENTO AI에서 리액트 렌더링이나 최적화 관점에서 나름의 성과를 거둘 수 있었습니다.',
+      '프론트엔드 개발자로서 더욱 성장하기 위해서는 제가 다루는 도구들의 동작 원리를 정확하게 이해하고 이를 활용할 수 있어야 한다는 생각이 명확해지게 되었고, TSX Craft 프로젝트를 시작하게 되었습니다.',
+    ],
     images: [
       {
         name: 'App.tsx 사용 예시',
@@ -62,8 +67,16 @@ export const projectDetail = {
       from: '2024.06',
       to: '2024.09',
     },
-    skills: ['Next.js', 'Tailwind CSS'],
+    skills: ['Next.js', 'Tailwind CSS', 'Express'],
+    background: [
+      '수영 강사였던 지인을 통해 여전히 현장에서는 수기나 카카오톡으로 하나하나 수강생이나 수업들을 체크하고 있는 것을 알게 되었습니다.',
+      '이러한 점을 해결해보고 싶어 해당 프로젝트를 진행하게 되었습니다.'
+    ],
     images: [],
+    hilight: {
+      type: 'empty',
+      src: '',
+    },
     links: {
       github: 'https://github.com/Just-Swim-service/Just-Swim-FE',
     },
@@ -101,27 +114,16 @@ export const projectDetail = {
       from: '2024.05',
       to: '진행중',
     },
-    skills: ['Next.js', 'framer-motion'],
-    images: [
-      {
-        name: 'Home 페이지',
-        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/home.gif'
-      },
-      {
-        name: 'about 페이지',
-        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/about.gif'
-      },
-      {
-        name: 'career 페이지',
-        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/career.gif'
-      },
-      {
-        name: 'work 페이지',
-        src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/portfolio/work.gif'
-      },
+    skills: ['Next.js', 'framer-motion', 'gsap'],
+    background: [
+      '노션이나 프레젠테이션 등의 플랫폼을 이용해서 포트폴리오를 정리하는 사람들이 많습니다.',
+      '하지만 저는 프론트엔드 개발자로서 언젠가는 저만의 포트폴리오 사이트는 꼭 만들고 싶다고 생각했습니다.',
+      '또한 평소에 애니메이션을 직접 구현하는 것을 좋아하기에 다양한 사용자 인터렉션을 추가하여 포트폴리오를 만들어보고 싶었습니다.',
+      '이러한 점들 때문에 지금의 포트폴리오 사이트를 제작하게 되었습니다.'
     ],
+    images: [],
     hilight: {
-      type: 'image',
+      type: 'empty',
       src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/portfolio.gif',
     },
     links: {
@@ -161,6 +163,11 @@ export const projectDetail = {
       to: '2024.02.01',
     },
     skills: ['JavaScript', 'Express'],
+    background: [
+      '삼성 청년 SW 아카데미를 수료한 이후, 프론트엔드 개발자로서 성장하기 위해 JavaScript 관련 지식들을 점검하고 있었습니다.',
+      '해당 지식들을 활용해서 단순한 서비스가 아닌, JavaScript를 활용해서 조금 더 깊이가 있는 프로젝트를 해보고 싶었습니다.',
+      '이러한 생각들 때문에 해당 프로젝트를 시작하게 되었습니다.'
+    ],
     images: [
       {
         name: '부포 컴포넌트',
@@ -228,6 +235,11 @@ export const projectDetail = {
       to: '2023.11.17',
     },
     skills: ['React', 'Next.js', 'babel'],
+    background: [
+      '오픈 소스 관련 팀 프로젝트를 진행하고 싶었고, 사람들이 많이 사용할 수 있는 라이브러리를 만들어보고 싶었습니다.',
+      '기존 차트 라이브러리들에서 적용할 수 있는 속성이나 애니메이션들이 생각보다 제한적이라는 것을 알게 되었습니다.',
+      '사용자가 선택할 수 있는 선택의 폭을 최대한 많이 제공하는 차트 라이브러리를 만들어 보고 싶었고, 이를 실행하게 되었습니다.'
+    ],
     images: [
       {
         name: '메인 페이지',
@@ -310,6 +322,10 @@ export const projectDetail = {
       to: '2023.10.06',
     },
     skills: ['React', 'SpringBoot', 'FastAPI', 'Pytorch', 'MySQL', 'MongoDB'],
+    background: [
+      '팀원 중 한 분의 지인이 뇌 질환을 앓았는데 병원에서 재활을 위해 인쇄된 그림을 사용해서 재활 치료를 한다는 것을 알게 되었습니다.',
+      'AI 기술을 접목하여 이 문제를 해결해보고 싶었고, 프로젝트를 시작하게 되었습니다.'
+    ],
     images: [
       {
         name: '발음 연습 페이지',
@@ -394,6 +410,10 @@ export const projectDetail = {
       to: '2023.08.18',
     },
     skills: ['React', 'SpringBoot', 'Express', 'MySQL', 'Socket.io'],
+    background: [
+      '학급에서 언어 교류를 위한 플랫폼이 굉장히 제한적인 것을 보았습니다.',
+      'Web RTC 기술과 Web Socket을 활용해 이를 해결해보고자 해당 프로젝트를 진행하게 되었습니다.',
+    ],
     images: [
       {
         name: '메인 페이지',

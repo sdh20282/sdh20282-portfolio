@@ -11,7 +11,7 @@ export function DetailLive({
   live?: string,
   scrollYProgress: MotionValue,
 }) {
-  const liveLinkTransformY = useTransform(scrollYProgress, [0, 1], [150, -500]);
+  const liveLinkTransformY = useTransform(scrollYProgress, [0, 1], [250, -1600]);
 
   return (
     <>

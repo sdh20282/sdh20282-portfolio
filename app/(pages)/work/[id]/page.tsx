@@ -20,19 +20,7 @@ export default function WorkDetail({
   const project = projectDetail[params.id as keyof typeof projectDetail];
 
   return (
-    <FramerWrapper
-      title={project.title}
-      introduce={project.introduce}
-      period={project.period}
-      members={project.members}
-      skills={project.skills}
-      links={project.links}
-      images={project.images}
-      // @ts-ignore
-      hilight={project.hilight}
-      role={project.role}
-      learns={project.learns}
-    />
+    <FramerWrapper {...project} />
   )
 }
 

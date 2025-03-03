@@ -71,7 +71,7 @@ export function DetailScreens({
 }) {
   return (
     <motion.div 
-      className="px-[8vw] pb-[200px]"
+      className="px-[8vw] py-[200px]"
       variants={slideUp}
       initial='initial'
       animate='enter'
