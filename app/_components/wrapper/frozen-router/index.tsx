@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from 'react';
-import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
-import { usePreviousValue } from '@/hooks';
-import { usePathname } from 'next/navigation';
+import { useContext, useEffect, useState } from "react";
+import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { usePreviousValue } from "@/hooks";
+import { usePathname } from "next/navigation";
 
-export function FrozenRouter(props: { children: React.ReactNode }) {
+export function FrozenRouter({ children }: { children: React.ReactNode }) {
   const context = useContext(LayoutRouterContext);
   const prevContext = usePreviousValue(context) ?? null;
 
@@ -12,31 +12,35 @@ export function FrozenRouter(props: { children: React.ReactNode }) {
 
   const [targetContext, setTargetContext] = useState<typeof context>(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   const changed = pathname !== prevPathname && pathname !== undefined && prevPathname !== undefined;
 
   useEffect(() => {
-    if (pathname !== prevPathname) {
-      setIsAnimating(true);
-      setTargetContext(prevContext);
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
     }
-    
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname, prevPathname]);
+  }, []);
 
   useEffect(() => {
-    if (!isAnimating) return;
+    if (changed) {
+      setScrollY(window.scrollY);
+      setIsAnimating(true);
+      setTargetContext(prevContext);
 
-    const timer = setTimeout(() => {
-      setIsAnimating(false);
-    }, 750);
+      setTimeout(() => setIsAnimating(false), 750);
+    }
+  }, [changed]);
 
-    return () => clearTimeout(timer);
+  useEffect(() => {
+    if (!isAnimating) {
+      window.scrollTo({ top: changed ? 0 : scrollY, behavior: "instant" });
+    }
   }, [isAnimating]);
- 
+
   return (
     <LayoutRouterContext.Provider value={changed || isAnimating ? targetContext ?? prevContext : context}>
-      {props.children}
+      {children}
     </LayoutRouterContext.Provider>
   );
 }
