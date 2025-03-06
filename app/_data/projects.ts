@@ -183,7 +183,7 @@ export const projectDetail = {
       src: 'https://raw.githubusercontent.com/sdh20282/image-archive/main/Portfolio/hilight/vanilla-js-spa.gif',
     },
     links: {
-      github: 'https://github.com/sdh20282/jetty-chart',
+      github: 'https://github.com/sdh20282/vanilla-js-spa',
     },
     role: [
       {
