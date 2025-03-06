@@ -27,7 +27,7 @@ export default function WorkDetail({
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const works = ['jetty-chart', 'nashda', 'talkids'];
+  const works = ['tsx-craft', 'just-swim', 'portfolio', 'vanilla-js-spa', 'jetty-chart', 'nashda', 'talkids'];
 
   return works.map(work => ({ id: work }));
 }
