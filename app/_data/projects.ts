@@ -492,15 +492,15 @@ export const recentWorkOptions = [
     year: '2025',
   },
   {
+    title: 'sdh20282\'s portfolio',
+    link: 'portfolio',
+    image: PortFolioPreview,
+    year: '2024',
+  },
+  {
     title: 'Jetty Chart',
     link: 'jetty-chart',
     image: JettyPreview,
-    year: '2023',
-  },
-  {
-    title: '내쉬다',
-    link: 'nashda',
-    image: NashdaPreview,
     year: '2023',
   },
 ];

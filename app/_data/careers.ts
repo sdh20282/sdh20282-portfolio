@@ -58,10 +58,6 @@ export const careerDetail = {
             subs: [],
           },
           {
-            main: 'open api를 통해 API 응답 데이터 타입을 직접 선언하지 않고, 백엔드에서 정의한 타입을 활용하여 개발 생산성 향상',
-            subs: [],
-          },
-          {
             main: 'dnd 활용, 홈페이지 데이터 노출 순서 조절 기능 구현',
             subs: [],
           },
@@ -109,10 +105,6 @@ export const careerDetail = {
             subs: [
               'nextjs의 app router와 같은 형식으로 라우팅 방식 구현',
             ],
-          },
-          {
-            main: 'open api를 통해 API 응답 데이터 타입을 직접 선언하지 않고, 백엔드에서 정의한 타입을 활용하여 개발 생산성 향상',
-            subs: [],
           },
           {
             main: '태스크 분배 및 일정 관리, 배포 관리',
