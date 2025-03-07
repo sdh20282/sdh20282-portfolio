@@ -285,6 +285,14 @@ export const projectDetail = {
         ]
       }
     ],
+    troubleShootings: [
+      {
+        title: '',
+      }
+    ],
+    review: [
+
+    ],
     learns: [
       {
         main: '모듈화를 통해 개발 시간을 크게 단축했습니다.',
