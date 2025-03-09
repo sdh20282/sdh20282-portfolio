@@ -11,7 +11,7 @@ export function SocialInfo() {
     <div className='flex items-stretch gap-5 mt-auto pt-[150px] pb-[25px]'>
       <div className='flex flex-col'>
         <p className='text-[#777] uppercase text-sm'>Modified</p>
-        <p className='py-2 uppercase text-lg'>2025.03.04</p>
+        <p className='py-2 uppercase text-lg'>2025.03.10</p>
       </div>
       <div className='flex flex-col ml-auto'>
         <p className='text-[#777] uppercase text-sm'>Socials</p>

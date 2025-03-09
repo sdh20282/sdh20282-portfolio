@@ -5,6 +5,10 @@ export const socialMedias = [
   },
   {
     href: 'https://www.instagram.com/sdh20282/',
-    title: 'Instagram'
+    title: 'Instagram',
+  },
+  {
+    href: 'https://velog.io/@sdh20282',
+    title: 'blog',
   }
 ];
