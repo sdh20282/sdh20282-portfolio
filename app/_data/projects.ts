@@ -150,6 +150,7 @@ export const projectDetail = {
         sub: [
           'framer-motion을 활용하여 페이지 전환 애니메이션을 처리하는 과정에서 app router에서 페이지 전환 애니메이션이 동작하지 않는 문제를 마주했습니다.',
           'LayoutRouterContext를 통해 router 갱신을 강제로 막는 frozen router를 통해 문제를 해결하는 과정에서 page router와 app router의 렌더링 과정 차이를 이해할 수 있었습니다.',
+          'LINK::관련 이슈를 다룬 블로그 포스팅::https://velog.io/@sdh20282/App-Router%EC%97%90%EC%84%9C-framer-motion-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-exit-animation%EC%9D%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%8F%99%EC%9E%91%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EB%AC%B8%EC%A0%9C',
         ]
       },
     ]
